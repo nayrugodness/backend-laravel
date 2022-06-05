@@ -11,7 +11,8 @@
         <table class="table">
             <thead class="bg-primary text-light">
                 <tr>
-                    <th scole="col">Titulo</th>
+                    <th scole="col">Nombre</th>
+                    <th scole="col">Ciudad</th>
                     <th scole="col">Categoría</th>
                     <th scole="col">Acciones</th>
                 </tr>
@@ -22,6 +23,7 @@
                 @foreach ($recetas as $receta)
                     <tr>
                         <td> {{$receta->titulo}} </td>
+                        <td>{{ $receta->ciudad->nombre}}</td>
                         <td> {{$receta->categoria->nombre}} </td>
                         <td>
 
@@ -42,7 +44,7 @@
         </div>
 
 
-        <h2 class="text-center my-5">Recetas que te gustan</h2>
+        <h2 class="text-center my-5">Restaurantes que te gustan</h2>
         <div class="col-md-10 mx-auto bg-white p-3">
 
             @if ( count( $usuario->meGusta ) > 0 )
@@ -56,7 +58,7 @@
                     @endforeach
                 </ul>
             @else
-                <p class="text-center">Aún no tienes restaurantes favoritos guardados
+                <p class="text-center" style="font-size:1.5rem;">Aún no tienes restaurantes favoritos guardados
                     <small> Dale me gusta a los restaurantes y aparecerán aquí</small>
                 </p>
 

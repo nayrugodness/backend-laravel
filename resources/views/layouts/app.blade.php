@@ -68,13 +68,13 @@
                                     <a
                                         class="dropdown-item"
                                         href="{{ route('perfiles.show', ['perfil' => Auth::user()->id ]) }}">
-                                        {{ 'Ver Perfil' }}
+                                        {{ 'Ver mi perfil' }}
                                     </a>
 
                                     <a
                                         class="dropdown-item"
                                         href="{{ route('recetas.index') }}">
-                                        {{ 'Ver Restaurantes' }}
+                                        {{ 'Administrar mis restaurantes' }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

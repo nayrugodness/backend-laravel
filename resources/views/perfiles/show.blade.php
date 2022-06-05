@@ -32,7 +32,7 @@
 
                             <div class="card-body">
                                 <h3>{{$receta->titulo}}</h3>
-                                <a href="{{ route('recetas.show', ['receta' => $receta->id ]) }}" class="btn btn-primary d-block mt-4 text-uppercase font-weight-bold">Ver Receta</a>
+                                <a href="{{ route('recetas.show', ['receta' => $receta->id ]) }}" class="btn btn-primary d-block mt-4 text-uppercase font-weight-bold">Ver restaurante</a>
                             </div>
                         </div>
                     </div>

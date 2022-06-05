@@ -5,7 +5,7 @@
 @endsection
 
 @section('botones')
-    <a href="{{ route('recetas.index') }}" class="btn btn-outline-primary mr-2 text-uppercase font-weight-bold">
+    <a href="{{ route('recetas.index') }}" class="btn btn-outline-primary mr-2 text-uppercase font-weight-bold" style="width: 10rem;">
         <svg class="icono" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg>
         Volver
     </a>
@@ -13,7 +13,7 @@
 
 @section('content')
     <div style="background-color: white;">
-        <h2 class="text-center" style="color:#AC0202; font-size:2rem;">Crear Nueva Receta</h2>
+        <h2 class="text-center mb-1" style="color:#AC0202; font-size:1.8rem;">Registra tu restaurante</h2>
         <div class="row justify-content-center ">
             <div class="col-md-8">
                 <form method="POST" action="{{ route('recetas.store') }}" enctype="multipart/form-data" novalidate>
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Agregar Receta" style="width:100%; padding-top:0.5rem;font-size:1.5rem;" >
+                        <input type="submit" class="btn btn-primary" value="Agregar restaurante" style="width:100%; padding-top:0.5rem;font-size:1.5rem;" >
                     </div>
 
                 </form>
