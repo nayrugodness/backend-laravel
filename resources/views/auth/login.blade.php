@@ -2,14 +2,14 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="font-size: 1.4rem;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" >
                         @csrf
 
                         <div class="form-group row">
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-lg-12 col-md-12 offset-md-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -53,8 +53,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-12 offset-md-12">
+                                <button type="submit" class="btn btn-primary" style="width:80%; align-self:center;">
                                     {{ __('Login') }}
                                 </button>
 

@@ -1924,8 +1924,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$swal({
-        title: '¿Deseas eliminar esta receta?',
-        text: "Una vez eliminada, no se puede recuperar",
+        title: '¿Deseas eliminar este restaurante?',
+        text: "Una vez eliminado, no se puede recuperar",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -74484,8 +74484,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\workspace-2020\recetaslaravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\workspace-2020\recetaslaravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\USUARIO\Desktop\ultimointento\recetas-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\USUARIO\Desktop\ultimointento\recetas-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

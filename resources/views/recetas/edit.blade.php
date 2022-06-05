@@ -23,13 +23,13 @@
 
                 @method('PUT')
                 <div class="form-group">
-                    <label for="titulo">Titulo Receta</label>
+                    <label for="titulo">Nombre del restaurante</label>
 
                     <input type="text"
                         name="titulo"
                         class="form-control @error('titulo') is-invalid @enderror "
                         id="titulo"
-                        placeholder="Titulo Receta"
+                        placeholder="Nombre del restaurante"
                         value="{{ $receta->titulo }}"
                     >
 
@@ -41,13 +41,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="direccion">direccion</label>
+                    <label for="direccion">Dirección</label>
 
                     <input type="text"
                         name="direccion"
                         class="form-control @error('direccion') is-invalid @enderror "
                         id="direccion"
-                        placeholder="direccion"
+                        placeholder="Dirección"
                         value="{{ $receta->direccion }}"
                     >
 
@@ -59,13 +59,31 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="telefono">telefono</label>
+                    <label for="email">Correo electrónico</label>
+
+                    <input type="text"
+                        name="email"
+                        class="form-control @error('email') is-invalid @enderror "
+                        id="email"
+                        placeholder="restautante@gmail.com"
+                        value="{{ $receta->email }}"
+                    >
+
+                    @error('email')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
 
                     <input type="text"
                         name="telefono"
                         class="form-control @error('telefono') is-invalid @enderror "
                         id="telefono"
-                        placeholder="telefono"
+                        placeholder=""
                         value="{{ $receta->telefono }}"
                     >
 
@@ -141,7 +159,7 @@
 
                 
                 <div class="form-group mt-3">
-                    <label for="imagen">Elige la imagen</label>
+                    <label for="imagen">Elige la  imagen principal de tu restaurante</label>
 
                     <input
                         id="imagen"

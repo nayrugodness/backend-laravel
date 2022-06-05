@@ -13,37 +13,37 @@ class CategoriasSeeder extends Seeder
     public function run()
     {
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Comida Mexicana',
+            'nombre' => 'Restaurante y cafetería',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Comida Italiana',
+            'nombre' => 'Temático',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Comida Argentina',
+            'nombre' => 'Vegano',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Postres',
+            'nombre' => 'Vegetariano',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Cortes',
+            'nombre' => 'Gourmet',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Ensaladas',
+            'nombre' => 'Restaurante Bar',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Desayunos',
+            'nombre' => 'Comida Rápida',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);

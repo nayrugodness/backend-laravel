@@ -5,17 +5,17 @@
 @endsection
 
 @section('hero')
-    <div class="hero-categorias">
+    <div class="hero-categorias" style="text-align:center;">
         <form class="container h-100" action={{ route('buscar.show') }}>
-            <div class="row h-100 align-items-center">
-                <div class="col-md-4 texto-buscar">
-                    <p class="display-4">Encuentra una receta para tu próxima comida</p>
+            <div class="row h-100" style="display:flex; justify-content:center; align-items:center;">
+                <div class="col-md-6 texto-buscar" style="text-align:center;">
+                    <p class="display-4">Encuentra un restaurante para tu siguiente comida</p>
 
                     <input
                         type="search"
                         name="buscar"
                         class="form-control"
-                        placeholder="Buscar Receta"
+                        placeholder="Buscar Restaurante"
                     />
                 </div>
             </div>
@@ -27,7 +27,7 @@
     
 
     <div class="container nuevas-recetas">
-        <h2 class="titulo-categoria text-uppercase mb-4">Últimas Recetas</h2>
+        <h2 class="titulo-categoria text-uppercase mb-4">Nuevos Restaurantes</h2>
 
         <div class="owl-carousel owl-theme">
             @foreach ($nuevas as $nueva)
@@ -37,7 +37,7 @@
                     <div class="card-body h-100">
                         <h3>{{ Str::title( $nueva->titulo ) }}</h3>
 
-                        <p> {{ Str::words(  strip_tags( $nueva->preparacion ), 15 ) }} </p>
+                        <p> {{ Str::words(  strip_tags( $nueva->descripcion ), 15 ) }} </p>
 
                         <a href=" {{ route('recetas.show', ['receta' => $nueva->id ]) }} "
                             class="btn btn-primary d-block font-weight-bold text-uppercase"
@@ -49,7 +49,7 @@
     </div>
 
     <div class="container">
-        <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Recetas más Votadas</h2>
+        <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Los mejores restaurantes</h2>
         
         <div class="row">
             @foreach($votadas as $receta)

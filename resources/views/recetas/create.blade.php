@@ -12,185 +12,185 @@
 @endsection
 
 @section('content')
-    <h2 class="text-center mb-5">Crear Nueva Receta</h2>
+    <div style="background-color: white;">
+        <h2 class="text-center" style="color:#AC0202; font-size:2rem;">Crear Nueva Receta</h2>
+        <div class="row justify-content-center ">
+            <div class="col-md-8">
+                <form method="POST" action="{{ route('recetas.store') }}" enctype="multipart/form-data" novalidate>
+                    @csrf
+                    <div class="form-group">
+                        <label for="titulo" style="font-size:1.5rem;">Nombre restaurante</label>
 
+                        <input style="font-size:1.5rem;" type="text"
+                            name="titulo"
+                            class="form-control @error('titulo') is-invalid @enderror "
+                            id="titulo"
+                            placeholder="Nombre restaurante"
+                            value={{ old('titulo') }}
+                        >
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-8">
-            <form method="POST" action="{{ route('recetas.store') }}" enctype="multipart/form-data" novalidate>
-                @csrf
-                <div class="form-group">
-                    <label for="titulo">Titulo Receta</label>
+                        @error('titulo')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <input type="text"
-                        name="titulo"
-                        class="form-control @error('titulo') is-invalid @enderror "
-                        id="titulo"
-                        placeholder="Titulo Receta"
-                        value={{ old('titulo') }}
-                    >
+                    <div class="form-group">
+                        <label for="direccion" style="font-size:1.5rem;">Dirección</label>
 
-                    @error('titulo')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        <input style="font-size:1.5rem;" type="text"
+                            name="direccion"
+                            class="form-control @error('direccion') is-invalid @enderror "
+                            id="direccion"
+                            placeholder="Escribe la dirección"
+                            value={{ old('direccion') }}
+                        >
 
-                <div class="form-group">
-                    <label for="direccion">direccion</label>
+                        @error('direccion')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <input type="text"
-                        name="direccion"
-                        class="form-control @error('direccion') is-invalid @enderror "
-                        id="direccion"
-                        placeholder="direccion"
-                        value={{ old('direccion') }}
-                    >
+                    <div class="form-group">
+                        <label for="telefono" style="font-size:1.5rem;">Teléfono</label>
 
-                    @error('direccion')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        <input style="font-size:1.5rem;" type="text"
+                            name="telefono"
+                            class="form-control @error('telefono') is-invalid @enderror "
+                            id="telefono"
+                            placeholder=""
+                            value={{ old('telefono') }}
+                        >
 
-                <div class="form-group">
-                    <label for="telefono">telefono</label>
+                        @error('telefono')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <input type="text"
-                        name="telefono"
-                        class="form-control @error('telefono') is-invalid @enderror "
-                        id="telefono"
-                        placeholder="telefono"
-                        value={{ old('telefono') }}
-                    >
+                    <div class="form-group">
+                        <label for="email" style="font-size:1.5rem;">Correo electrónico</label>
 
-                    @error('telefono')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        <input style="font-size:1.5rem;" type="email"
+                            name="email"
+                            class="form-control @error('email') is-invalid @enderror "
+                            id="email"
+                            placeholder="email"
+                            value={{ old('email') }}
+                        >
 
-                <div class="form-group">
-                    <label for="email">email</label>
+                        @error('email')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    
 
-                    <input type="email"
-                        name="email"
-                        class="form-control @error('email') is-invalid @enderror "
-                        id="email"
-                        placeholder="email"
-                        value={{ old('email') }}
-                    >
+                    <div class="from-group">
+                        <label for="categoria" style="font-size:1.5rem;">Categoria</label>
 
-                    @error('email')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
-                
+                        <select style="font-size:1.5rem;"
+                            name="categoria"
+                            class="form-control @error('categoria') is-invalid @enderror "
+                            id="categoria"
+                        >
+                            <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
+                            @foreach ($categorias as $categoria)
+                                <option 
+                                    value="{{ $categoria->id }}" 
+                                    {{ old('categoria') == $categoria->id ? 'selected' : '' }} 
+                                >{{$categoria->nombre}}</option>
+                            @endforeach
+                        </select>
 
-                <div class="from-group">
-                    <label for="categoria">Categoria</label>
+                        @error('categoria')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <select
-                        name="categoria"
-                        class="form-control @error('categoria') is-invalid @enderror "
-                        id="categoria"
-                    >
-                        <option value="">-- Seleccione -</option>
-                        @foreach ($categorias as $categoria)
-                            <option 
-                                value="{{ $categoria->id }}" 
-                                {{ old('categoria') == $categoria->id ? 'selected' : '' }} 
-                            >{{$categoria->nombre}}</option>
-                        @endforeach
-                    </select>
+                    <div class="from-group">
+                        <label for="ciudad" style="font-size:1.5rem;">Ciudad</label>
 
-                    @error('categoria')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        <select style="font-size:1.5rem;"
+                            name="ciudad"
+                            class="form-control @error('ciudad') is-invalid @enderror "
+                            id="ciudad"
+                        >
+                            <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
+                            @foreach ($ciudades as $ciudad)
+                                <option 
+                                    value="{{ $ciudad->id }}" 
+                                    {{ old('ciudad') == $ciudad->id ? 'selected' : '' }} 
+                                >{{$ciudad->nombre}}</option>
+                            @endforeach
+                        </select>
 
-                <div class="from-group">
-                    <label for="ciudad">Ciudad</label>
+                        @error('ciudad')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <select
-                        name="ciudad"
-                        class="form-control @error('ciudad') is-invalid @enderror "
-                        id="ciudad"
-                    >
-                        <option value="">-- Seleccione -</option>
-                        @foreach ($ciudades as $ciudad)
-                            <option 
-                                value="{{ $ciudad->id }}" 
-                                {{ old('ciudad') == $ciudad->id ? 'selected' : '' }} 
-                            >{{$ciudad->nombre}}</option>
-                        @endforeach
-                    </select>
+                    <div class="form-group mt-3">
+                        <label for="descripcion" style="font-size:1.5rem;">descripcion</label>
+                        <input id="descripcion" style="font-size:1.5rem;" type="hidden" name="descripcion" value="{{ old('descripcion') }}">
+                        <trix-editor 
+                            class="form-control @error('descripcion') is-invalid @enderror "
+                            input="descripcion"
+                        ></trix-editor>
 
-                    @error('ciudad')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        @error('descripcion')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                <div class="form-group mt-3">
-                    <label for="descripcion">descripcion</label>
-                    <input id="descripcion" type="hidden" name="descripcion" value="{{ old('descripcion') }}">
-                    <trix-editor 
-                        class="form-control @error('descripcion') is-invalid @enderror "
-                        input="descripcion"
-                    ></trix-editor>
+                    <!--<div class="form-group mt-3">
+                        <label for="ingredientes">Ingredientes</label>
+                        <input id="ingredientes" type="hidden" name="ingredientes" value="{{ old('ingredientes') }}">
+                        <trix-editor 
+                            class="form-control @error('ingredientes') is-invalid @enderror "
+                            input="ingredientes"></trix-editor>
 
-                    @error('descripcion')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
+                        @error('ingredientes')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>-->
 
-                <!--<div class="form-group mt-3">
-                    <label for="ingredientes">Ingredientes</label>
-                    <input id="ingredientes" type="hidden" name="ingredientes" value="{{ old('ingredientes') }}">
-                    <trix-editor 
-                        class="form-control @error('ingredientes') is-invalid @enderror "
-                        input="ingredientes"></trix-editor>
+                    <div class="form-group mt-3">
+                        <label for="imagen" style="font-size:1.5rem;">Elige la imagen</label>
 
-                    @error('ingredientes')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>-->
+                        <input style="font-size:1.5rem;"
+                            id="imagen" 
+                            type="file" 
+                            class="form-control @error('imagen') is-invalid @enderror"
+                            name="imagen"
+                        >
 
-                <div class="form-group mt-3">
-                    <label for="imagen">Elige la imagen</label>
+                        @error('imagen')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                    <input 
-                        id="imagen" 
-                        type="file" 
-                        class="form-control @error('imagen') is-invalid @enderror"
-                        name="imagen"
-                    >
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Agregar Receta" style="width:100%; padding-top:0.5rem;font-size:1.5rem;" >
+                    </div>
 
-                    @error('imagen')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Agregar Receta" >
-                </div>
-
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 

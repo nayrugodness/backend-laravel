@@ -13,8 +13,8 @@
         methods: {
             eliminarReceta(){
                     this.$swal({
-                        title: '¿Deseas eliminar esta receta?',
-                        text: "Una vez eliminada, no se puede recuperar",
+                        title: '¿Deseas eliminar este restaurante?',
+                        text: "Una vez eliminado, no se puede recuperar",
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',

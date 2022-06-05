@@ -175,23 +175,23 @@ class RecetaController extends Controller
         $data = $request->validate([
             'titulo' => 'required|min:6',
             'descripcion' => 'required',
-            //'ingredientes' => 'required',
             'direccion' => 'required',
+            'imagen' => 'required',
             'email' => 'required',
             'telefono' => 'required',
+            'ciudad' => 'required',
             'categoria' => 'required',
-            'ciudad' => 'required'
         ]);
 
         // Asignar los valores
         $receta->titulo = $data['titulo'];
         $receta->descripcion = $data['descripcion'];
-        //$receta->ingredientes = $data['ingredientes'];
         $receta->direccion = $data['direccion'];
         $receta->email = $data['email'];
         $receta->telefono = $data['telefono'];
-        $receta->categoria_id = $data['categoria'];
         $receta->ciudad_id = $data['ciudad'];
+        $receta->categoria_id = $data['categoria'];
+
 
 
         // Si el usuario sube una nueva imagen

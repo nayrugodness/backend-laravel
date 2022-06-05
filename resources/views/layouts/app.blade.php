@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
 
 
     @yield('styles')
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Hoisu') }}</title>
 
 
     <!-- Scripts -->
@@ -30,7 +33,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Hoisu') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -71,7 +74,7 @@
                                     <a
                                         class="dropdown-item"
                                         href="{{ route('recetas.index') }}">
-                                        {{ 'Ver Recetas' }}
+                                        {{ 'Ver Restaurantes' }}
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -116,11 +119,11 @@
 
         <div class="container">
             <div class="row">
-                <div class="py-4 mt-5 col-12">
+                <div class="py-1 mt-4 col-12">
                     @yield('botones')
                 </div>
 
-                <main class="py-4 mt-5 col-12">
+                <main class="py-3 mt-2 col-12" style="text-align:center;">
                     @yield('content')
                 </main>
             </div>

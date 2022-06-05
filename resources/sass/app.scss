@@ -1,6 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fredoka+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 // Variables
 @import 'variables';
 
@@ -11,3 +10,7 @@
 @import 'recetas';
 
 @import 'like';
+
+*{
+    font-family: 'Stylish', sans-serif;
+}
