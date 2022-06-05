@@ -86,14 +86,14 @@
                 </div>
 
                 <div class="form-group mt-3">
-                    <label for="preparacion">Preparación</label>
-                    <input id="preparacion" type="hidden" name="preparacion" value="{{ old('preparacion') }}">
+                    <label for="descripcion">descripcion</label>
+                    <input id="descripcion" type="hidden" name="descripcion" value="{{ old('descripcion') }}">
                     <trix-editor 
-                        class="form-control @error('preparacion') is-invalid @enderror "
-                        input="preparacion"
+                        class="form-control @error('descripcion') is-invalid @enderror "
+                        input="descripcion"
                     ></trix-editor>
 
-                    @error('preparacion')
+                    @error('descripcion')
                         <span class="invalid-feedback d-block" role="alert">
                             <strong>{{$message}}</strong>
                         </span>

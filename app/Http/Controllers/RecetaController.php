@@ -76,7 +76,7 @@ class RecetaController extends Controller
         // validación
         $data = $request->validate([
             'titulo' => 'required|min:6',
-            'preparacion' => 'required',
+            'descripcion' => 'required',
             'ingredientes' => 'required',
             'imagen' => 'required|image',
             'categoria' => 'required',
@@ -103,7 +103,7 @@ class RecetaController extends Controller
         // almacenar en la BD (con modelo)
         auth()->user()->recetas()->create([
              'titulo' => $data['titulo'],
-             'preparacion' => $data['preparacion'],
+             'descripcion' => $data['descripcion'],
              'ingredientes' => $data['ingredientes'],
              'imagen' => $ruta_imagen,
              'categoria_id' => $data['categoria'],
@@ -167,7 +167,7 @@ class RecetaController extends Controller
         // validación
         $data = $request->validate([
             'titulo' => 'required|min:6',
-            'preparacion' => 'required',
+            'descripcion' => 'required',
             'ingredientes' => 'required',
             'categoria' => 'required',
             'ciudad' => 'required'
@@ -175,7 +175,7 @@ class RecetaController extends Controller
 
         // Asignar los valores
         $receta->titulo = $data['titulo'];
-        $receta->preparacion = $data['preparacion'];
+        $receta->descripcion = $data['descripcion'];
         $receta->ingredientes = $data['ingredientes'];
         $receta->categoria_id = $data['categoria'];
         $receta->ciudad_id = $data['ciudad'];
