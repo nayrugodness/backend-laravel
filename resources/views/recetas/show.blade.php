@@ -48,8 +48,8 @@
                 </div>
 
                 <div class="display:flex; flex-direction:row; flex-wrap: nowrap;">
-                    <h3 class="text-primary mt-4">Correo electrónico: {!! $receta->email!!}</h3>
-                    <h3 class="text-secondary mt-4">Teléfono: {!! $receta->telefono !!}</h3>
+                    <h3 class="text-primary mt-4" style="font-size:1.3rem;">Correo electrónico: {!! $receta->email!!}</h3>
+                    <h3 class="text-secondary mt-4" style="font-size:1.3rem;">Teléfono: {!! $receta->telefono !!}</h3>
                 </div>
             </div>
             

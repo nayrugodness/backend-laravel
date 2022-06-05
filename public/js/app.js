@@ -61919,7 +61919,9 @@ var render = function() {
       on: { click: _vm.likeReceta }
     }),
     _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.cantidadLikes) + " Les gustó esta receta")])
+    _c("p", { staticStyle: { "font-size": "1.2rem" } }, [
+      _vm._v(_vm._s(_vm.cantidadLikes) + " Les gustó este restaurante")
+    ])
   ])
 }
 var staticRenderFns = []
