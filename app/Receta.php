@@ -9,7 +9,7 @@ class Receta extends Model
 
     // Campos que se agregaran
     protected $fillable = [
-        'titulo', 'descripcion', 'ingredientes', 'imagen', 'categoria_id', 'ciudad_id'
+        'titulo', 'descripcion', 'imagen', 'categoria_id', 'ciudad_id'
     ];
     
     // Obtiene la categoria de la receta via FK

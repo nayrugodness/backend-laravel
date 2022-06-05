@@ -100,7 +100,7 @@
                     @enderror
                 </div>
 
-                <div class="form-group mt-3">
+                <!--<div class="form-group mt-3">
                     <label for="ingredientes">Ingredientes</label>
                     <input id="ingredientes" type="hidden" name="ingredientes" value="{{ old('ingredientes') }}">
                     <trix-editor 
@@ -112,7 +112,7 @@
                             <strong>{{$message}}</strong>
                         </span>
                     @enderror
-                </div>
+                </div>-->
 
                 <div class="form-group mt-3">
                     <label for="imagen">Elige la imagen</label>
