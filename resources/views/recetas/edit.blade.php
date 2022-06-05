@@ -40,6 +40,42 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="direccion">direccion</label>
+
+                    <input type="text"
+                        name="direccion"
+                        class="form-control @error('direccion') is-invalid @enderror "
+                        id="direccion"
+                        placeholder="direccion"
+                        value="{{ $receta->direccion }}"
+                    >
+
+                    @error('direccion')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">telefono</label>
+
+                    <input type="text"
+                        name="telefono"
+                        class="form-control @error('telefono') is-invalid @enderror "
+                        id="telefono"
+                        placeholder="telefono"
+                        value="{{ $receta->telefono }}"
+                    >
+
+                    @error('telefono')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
                 <div class="from-group">
                     <label for="categoria">Categoria</label>
 
@@ -64,35 +100,46 @@
                     @enderror
                 </div>
 
+                <div class="from-group">
+                    <label for="ciudad">Ciudad</label>
+
+                    <select
+                        name="ciudad"
+                        class="form-control @error('ciudad') is-invalid @enderror "
+                        id="ciudad"
+                    >
+                        <option value="">-- Seleccione -</option>
+                        @foreach ($ciudades as $ciudad)
+                            <option
+                                value="{{ $ciudad->id }}"
+                                {{ $receta->ciudad_id == $ciudad->id ? 'selected' : '' }}
+                            >{{$ciudad->nombre}}</option>
+                        @endforeach
+                    </select>
+
+                    @error('ciudad')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
                 <div class="form-group mt-3">
-                    <label for="preparacion">Preparación</label>
-                    <input id="preparacion" type="hidden" name="preparacion" value="{{ $receta->preparacion }}">
+                    <label for="descripcion">Descripcion</label>
+                    <input id="descripcion" type="hidden" name="descripcion" value="{{ $receta->descripcion }}">
                     <trix-editor
-                        class="form-control @error('preparacion') is-invalid @enderror "
-                        input="preparacion"
+                        class="form-control @error('descripcion') is-invalid @enderror "
+                        input="descripcion"
                     ></trix-editor>
 
-                    @error('preparacion')
+                    @error('descripcion')
                         <span class="invalid-feedback d-block" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
                     @enderror
                 </div>
 
-                <div class="form-group mt-3">
-                    <label for="ingredientes">Ingredientes</label>
-                    <input id="ingredientes" type="hidden" name="ingredientes" value="{{ $receta->ingredientes }}">
-                    <trix-editor
-                        class="form-control @error('ingredientes') is-invalid @enderror "
-                        input="ingredientes"></trix-editor>
-
-                    @error('ingredientes')
-                        <span class="invalid-feedback d-block" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                    @enderror
-                </div>
-
+                
                 <div class="form-group mt-3">
                     <label for="imagen">Elige la imagen</label>
 
