@@ -37,6 +37,61 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="direccion">direccion</label>
+
+                    <input type="text"
+                        name="direccion"
+                        class="form-control @error('direccion') is-invalid @enderror "
+                        id="direccion"
+                        placeholder="direccion"
+                        value={{ old('direccion') }}
+                    >
+
+                    @error('direccion')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">telefono</label>
+
+                    <input type="text"
+                        name="telefono"
+                        class="form-control @error('telefono') is-invalid @enderror "
+                        id="telefono"
+                        placeholder="telefono"
+                        value={{ old('telefono') }}
+                    >
+
+                    @error('telefono')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="email">email</label>
+
+                    <input type="email"
+                        name="email"
+                        class="form-control @error('email') is-invalid @enderror "
+                        id="email"
+                        placeholder="email"
+                        value={{ old('email') }}
+                    >
+
+                    @error('email')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+                
+
                 <div class="from-group">
                     <label for="categoria">Categoria</label>
 
