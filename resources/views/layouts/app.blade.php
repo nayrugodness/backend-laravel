@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        <!--<nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
+        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Hoisu') }}
@@ -91,55 +91,6 @@
                     </ul>
                 </div>
             </div>
-        </nav>-->
-        <nav>
-        <div id="logo">Your Logo here</div>
-
-        <label for="drop" class="toggle">Menu</label>
-        <input type="checkbox" id="drop" />
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li>
-                    <!-- First Tier Drop Down -->
-                    <label for="drop-1" class="toggle">WordPress +</label>
-                    <a href="#">WordPress</a>
-                    <input type="checkbox" id="drop-1"/>
-                    <ul>
-                        <li><a href="#">Themes and stuff</a></li>
-                        <li><a href="#">Plugins</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                    </ul> 
-
-                </li>
-                <li>
-
-                <!-- First Tier Drop Down -->
-                <label for="drop-2" class="toggle">Web Design +</label>
-                <a href="#">Web Design</a>
-                <input type="checkbox" id="drop-2"/>
-                <ul>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Links</a></li>
-                    <li>
-                       
-                    <!-- Second Tier Drop Down -->        
-                    <label for="drop-3" class="toggle">Tutorials +</label>
-                    <a href="#">Tutorials</a>         
-                    <input type="checkbox" id="drop-3"/>
-
-                    <ul>
-                        <li><a href="#">HTML/CSS</a></li>
-                        <li><a href="#">jQuery</a></li>
-                        <li><a href="#">Other</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                </li>
-                <li><a href="#">Graphic Design</a></li>
-                <li><a href="#">Inspiration</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
         </nav>
 
         <nav class="navbar navbar-expand-md navbar-light categorias-bg">
