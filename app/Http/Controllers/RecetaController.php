@@ -80,6 +80,8 @@ class RecetaController extends Controller
             'descripcion' => 'required',
             //'ingredientes' => 'required',
             'imagen' => 'required|image',
+            'apertura' => 'date_format:H:i',
+            'cierre' => 'date_format:H:i|after:apertura',
             'categoria' => 'required',
             'ciudad' => 'required',
             'direccion' => 'required',
@@ -111,6 +113,8 @@ class RecetaController extends Controller
              //'ingredientes' => $data['ingredientes'],
              'direccion' => $data['direccion'],
              'imagen' => $ruta_imagen,
+             'apertura' => $data['apertura'],
+             'cierre' => $data['cierre'],
              'email' => $data['email'],
              'telefono' => $data['telefono'],
              'categoria_id' => $data['categoria'],
@@ -177,6 +181,8 @@ class RecetaController extends Controller
             'descripcion' => 'required',
             'direccion' => 'required',
             'imagen' => 'required',
+            'apertura' => 'date_format:H:i',
+            'cierre' => 'date_format:H:i|after:apertura',
             'email' => 'required',
             'telefono' => 'required',
             'ciudad' => 'required',
@@ -188,6 +194,8 @@ class RecetaController extends Controller
         $receta->descripcion = $data['descripcion'];
         $receta->direccion = $data['direccion'];
         $receta->email = $data['email'];
+        $receta->apertura = $data['apertura'];
+        $receta->cierre = $data['cierre'];
         $receta->telefono = $data['telefono'];
         $receta->ciudad_id = $data['ciudad'];
         $receta->categoria_id = $data['categoria'];
