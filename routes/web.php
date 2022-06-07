@@ -42,3 +42,7 @@ Route::post('/recetas/{receta}', 'LikesController@update')->name('likes.update')
 
 Auth::routes();
 
+Route::get('/create-symlink', function (){
+    symlink(storage_path('/app/public'), public_path('storage'));
+    echo "Symlink Created. Thanks";
+});
