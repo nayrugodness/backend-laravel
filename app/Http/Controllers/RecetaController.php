@@ -93,7 +93,7 @@ class RecetaController extends Controller
 
         // Resize de la imagen
         //$img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1000, 550);
-        $ruta_imagen->save();
+        //$ruta_imagen->save();
         // almacenar en la bd (sin modelo)
         // DB::table('recetas')->insert([
         //     'titulo' => $data['titulo'],
