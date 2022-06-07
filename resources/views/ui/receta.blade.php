@@ -1,6 +1,6 @@
 <div class="col-md-4 mt-4">
     <div class="card shadow">
-        <img class="card-img-top" src="{{ asset('/storage/'. $receta->imagen) }}" alt="imagen receta">
+        <img class="card-img-top" src="{{asset('/storage/app/public/upload-recetas/'.$recetas->imagen )}}" alt="imagen receta">
         <div class="card-body">
             <h3 class="card-title">{{$receta->titulo}}</h3>
 
