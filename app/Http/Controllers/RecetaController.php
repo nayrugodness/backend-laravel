@@ -89,9 +89,9 @@ class RecetaController extends Controller
 
         // obtener la ruta de la imagen
         $ruta_imagen = $request['imagen']->store('upload-recetas', 'public');
-
+        $img = $ruta_imagen;
         // Resize de la imagen
-        $img = Image::make( public_path("storage/{$ruta_imagen}"));
+        //$img = Image::make( public_path("storage/{$ruta_imagen}"));
         $img->save();
 
         // almacenar en la bd (sin modelo)
