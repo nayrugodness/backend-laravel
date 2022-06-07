@@ -1,6 +1,6 @@
 <div class="col-md-4 mt-4">
     <div class="card shadow">
-        <img class="card-img-top" src="{{$receta->imagen}}" alt="imagen receta">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="imagen receta">
         <div class="card-body">
             <h3 class="card-title">{{$receta->titulo}}</h3>
 
