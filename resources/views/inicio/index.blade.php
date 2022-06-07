@@ -32,7 +32,7 @@
         <div class="owl-carousel owl-theme">
             @foreach ($nuevas as $nueva)
                 <div class="card ">
-                    <img src="https://www.pexels.com/photo/man-and-woman-standing-in-front-of-mirror-4694556/" class="card-img-top" alt="imagen receta">
+                    <img src="https://images.pexels.com/photos/4694556/pexels-photo-4694556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="imagen receta">
 
                     <div class="card-body h-100">
                         <h3>{{ Str::title( $nueva->titulo ) }}</h3>
