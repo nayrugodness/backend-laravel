@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
+       <!-- <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Hoisu') }}
@@ -44,7 +44,6 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
 
-                <!---->
                     <ul class="navbar-nav ml-auto">
                         
                         @guest
@@ -91,8 +90,59 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-
+        </nav>-->
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                <a href="#!">Logo</a>
+                </div>
+                <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                    <a href="#!">Home</a>
+                    </li>
+                    <li>
+                    <a href="#!">About</a>
+                    </li>
+                    <li>
+                    <a href="#!">Services</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                        <a href="#!">Web Design</a>
+                        </li>
+                        <li>
+                        <a href="#!">Web Development</a>
+                        </li>
+                        <li>
+                        <a href="#!">Graphic Design</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="#!">Pricing</a>
+                    </li>
+                    <li>
+                    <a href="#!">Portfolio</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                        <a href="#!">Web Design</a>
+                        </li>
+                        <li>
+                        <a href="#!">Web Development</a>
+                        </li>
+                        <li>
+                        <a href="#!">Graphic Design</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="#!">Contact</a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+        </section>
         <nav class="navbar navbar-expand-md navbar-light categorias-bg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#categorias" aria-controls="categorias" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
