@@ -87,36 +87,36 @@ class RecetaController extends Controller
 
         ]);
 
-        // obtener la ruta de la imagen
-        $ruta_imagen = $request['imagen']->store('upload-recetas', 'public');
-        $img = $ruta_imagen;
-        // Resize de la imagen
-        //$img = Image::make( public_path("storage/{$ruta_imagen}"));
+        // Guardar la imagen
+        $ruta_imagen = $request['imagen_principal']->store('principales', 'public');
+
+        // Resize a la imagen
+        $img = Image::make( public_path("storage/{$ruta_imagen}") )->fit(800, 600);
         $img->save();
 
         // almacenar en la bd (sin modelo)
-        // DB::table('recetas')->insert([
-        //     'titulo' => $data['titulo'],
-        //     'preparacion' => $data['preparacion'],
-        //     'ingredientes' => $data['ingredientes'],
-        //     'imagen' => $ruta_imagen,
-        //     'user_id' => Auth::user()->id,
-        //     'categoria_id' => $data['categoria']
-        // ]);
+         DB::table('recetas')->insert([
+             'titulo' => $data['titulo'],
+             'preparacion' => $data['preparacion'],
+             'ingredientes' => $data['ingredientes'],
+             'imagen' => $ruta_imagen,
+             'user_id' => Auth::user()->id,
+             'categoria_id' => $data['categoria']
+         ]);
 
         // almacenar en la BD (con modelo)
-        auth()->user()->recetas()->create([
-             'titulo' => $data['titulo'],
-             'descripcion' => $data['descripcion'],
+        //auth()->user()->recetas()->create([
+        //     'titulo' => $data['titulo'],
+        //     'descripcion' => $data['descripcion'],
              //'ingredientes' => $data['ingredientes'],
-             'direccion' => $data['direccion'],
-             'imagen' => $ruta_imagen,
-             'email' => $data['email'],
-             'telefono' => $data['telefono'],
-             'categoria_id' => $data['categoria'],
-             'ciudad_id' => $data['ciudad']
-        ]);
-
+        //     'direccion' => $data['direccion'],
+        //     'imagen' => $ruta_imagen,
+        //     'email' => $data['email'],
+        //     'telefono' => $data['telefono'],
+        //     'categoria_id' => $data['categoria'],
+        //     'ciudad_id' => $data['ciudad']
+        //]);
+        
 
 
         // Redireccionar
