@@ -154,6 +154,38 @@
                         @enderror
                     </div>
 
+                    <div class="form-group">
+                            <label for="nombre">Hora Apertura:</label>
+                            <input
+                                type="time"
+                                class="form-control @error('apertura')  is-invalid  @enderror"
+                                id="apertura"
+                                name="apertura"
+                                value="{{ old('apertura') }}"
+                            >
+                            @error('apertura')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre">Hora Cierre:</label>
+                            <input
+                                type="time"
+                                class="form-control @error('cierre')  is-invalid  @enderror"
+                                id="cierre"
+                                name="cierre"
+                                value="{{ old('cierre') }}"
+                            >
+                            @error('cierre')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
+
                     <!--<div class="form-group mt-3">
                         <label for="ingredientes">Ingredientes</label>
                         <input id="ingredientes" type="hidden" name="ingredientes" value="{{ old('ingredientes') }}">
