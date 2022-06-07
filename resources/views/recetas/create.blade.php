@@ -168,7 +168,7 @@
                                     {{$message}}
                                 </div>
                             @enderror
-                        </div>
+                    </div>
 
                         <div class="form-group">
                             <label for="nombre">Hora Cierre:</label>
