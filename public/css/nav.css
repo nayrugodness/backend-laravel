@@ -1,0 +1,172 @@
+.navar-hoisu:hover{
+    color: white;
+    text-decoration:none;
+}
+main p a {
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+#header {
+  left: 0;
+  float: left;
+  width: auto;
+  height: 4rem;
+  z-index: 1000;
+  align-items: center;
+}
+#caret {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(-45deg) translateY(-4px);
+}
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: black;
+}
+li, #trigger2, #trigger {
+  top:0;
+  list-style-type: none;
+  display: inline-block;
+  padding: 13px;
+  color: #f2f2f2;
+  transition: 0.2s;
+}
+ul {
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  background: #AC0202;
+  display: block;
+  width: 100%;
+  height: 3em;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+}
+#main {
+  left: 0;
+}
+li:hover, #trigger2:hover {
+  color: white;
+  background: #8a0202;
+  text-decoration: none;
+  font-size:1.2rem;
+}
+#dropdown {
+  top: 3em;
+  background-color:#AC0202;
+  height: 0;
+  overflow: hidden;
+  width: auto;
+  right: 2.1em;
+  transition: 0.5s;
+  z-index: 2000;
+}
+#dropdown li {
+  display: block;
+  padding-left: 10px;
+  padding-right: 50px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+}
+#dwn {
+  font-size: 0.8em;
+}
+#trigger:hover + #dropdown, #dropdown:hover {
+  height: 12em;
+}
+main {
+  position: absolute;
+  top: 2.8em;
+}
+main {
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  font-family: 'Slabo 27px', serif;
+  font-size: 2.5em;
+  color: #f2f2f2;
+}
+p {
+  color: #f2f2f2;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+a {
+  color: #f2f2f2;
+}
+#trigger:hover {
+  color: #6d0404;
+}
+.x1 {
+  position: relative;
+  top: -0.8em;
+}
+#src {
+  text-decoration: underline;
+}
+#src:hover {
+  text-decoration: none;
+}
+#trigger2 {
+  display: none !important;
+}
+#x7 {
+  left: 999999px;
+  
+}
+@media (max-width: 627px) {
+  #header {
+    width: 100%;
+  }
+  #brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  #main {
+    height: 0;
+    overflow: hidden;
+    z-index: 3000;
+    top: 3em;
+    text-align: left;
+    transition: 0.5s;
+  }
+  #main li, #trigger {
+    display: block;
+  }
+  #dropdown {
+    position: static;
+  }
+  #trigger2 {
+    display: inline-block !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  #x7:checked + #main {
+    height: auto;
+    padding-top: 1em;
+  }
+  #dropdown {
+    position: relative;
+    top: -1.6em !important;
+    right: 0em;
+    width: 100%;
+  }
+}
