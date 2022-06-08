@@ -17,7 +17,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/nav.js')}}" defer></script>
+    <!--<script src="{{ asset('js/nav.js')}}" defer></script>-->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -93,58 +93,65 @@
                 </div>
             </div>
         </nav>-->
-        <section class="navigation">
-            <div class="nav-container">
-                <div class="brand">
-                <a href="#!">Logo</a>
-                </div>
-                <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-                <ul class="nav-list">
-                    <li>
-                    <a href="#!">Home</a>
-                    </li>
-                    <li>
-                    <a href="#!">About</a>
-                    </li>
-                    <li>
-                    <a href="#!">Services</a>
-                    <ul class="nav-dropdown">
-                        <li>
-                        <a href="#!">Web Design</a>
+        <nav class="navbar-hoisu">
+            <ul id="header" style="height:3rem;">
+                <a href="{{ url('/') }}" id="brand">
+                <li>
+                    {{ config('app.name', 'Hoisu') }}
+                </li>
+                </a>
+                <label id="trigger2" for="x7"><img src="{{ asset('js/menu.png') }}" style="width:2rem; height:2rem;"></label>
+            </ul>
+            <input type="checkbox" id="x7" />
+            <ul id="main">
+                @guest
+                    <a href="{{ route('login') }}">
+                        <li class="x1">
+                            {{ __('Login') }}
                         </li>
-                        <li>
-                        <a href="#!">Web Development</a>
+                    </a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}">
+                            <li class="x1">
+                                {{ __('Register') }}
+                            </li>
+                        </a>
+                    @endif
+                @else
+                
+                    <a href="#" id="trigger">
+                        <li class="x1">
+                            {{ Auth::user()->name }}&nbsp;
+                            <span id="caret"></span>
                         </li>
+                    </a>
+                    <ul id="dropdown">
+                    <a href="{{ route('perfiles.show', ['perfil' => Auth::user()->id ]) }}">
                         <li>
-                        <a href="#!">Graphic Design</a>
+                            {{ 'Ver mi perfil' }}
                         </li>
-                    </ul>
-                    </li>
-                    <li>
-                    <a href="#!">Pricing</a>
-                    </li>
-                    <li>
-                    <a href="#!">Portfolio</a>
-                    <ul class="nav-dropdown">
+                    </a>
+                    <a href="{{ route('recetas.index') }}">
                         <li>
-                        <a href="#!">Web Design</a>
+                            {{ 'Administrar mis restaurantes' }}
                         </li>
+                    </a>
+                    <a href="">
                         <li>
-                        <a href="#!">Web Development</a>
+                            {{ 'ver mis reservaciones'}}
                         </li>
+                    </a>
+                    <a href="{{ route('logout') }}" 
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                         <li>
-                        <a href="#!">Graphic Design</a>
+                        {{ __('Logout') }}
                         </li>
-                    </ul>
-                    </li>
-                    <li>
-                    <a href="#!">Contact</a>
-                    </li>
+                    </a>
                 </ul>
-                </nav>
-            </div>
-        </section>
+                @endguest
+            </ul>
+        </nav>
         <!--<nav class="navbar navbar-expand-md navbar-light categorias-bg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#categorias" aria-controls="categorias" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
