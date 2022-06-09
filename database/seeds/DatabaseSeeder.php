@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CategoriasSeeder::class);
         $this->call(UsuarioSeeder::class);
         $this->call(CiudadSeeder::class);
-        // $this->call(UserSeeder::class);
+        $this->call(ReservasSeeder::class);
     }
 }
