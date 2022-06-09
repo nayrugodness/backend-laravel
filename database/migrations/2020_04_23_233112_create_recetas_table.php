@@ -44,7 +44,7 @@ class CreateRecetasTable extends Migration
 
         Schema::create('reserva', function (Blueprint $table) {
             $table->id();
-            $table->string('fecha');
+            $table->string('fecha'); 
             $table->time('hora');
             $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la receta');
             $table->foreignId('receta_id')->references('id')->on('recetas')->comment('El restaurante al que se reserva');
