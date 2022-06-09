@@ -9992,8 +9992,8 @@ trix-editor {
 }
 
 .titulo-categoria {
-  font-family: "Cabin", sans-serif;
-  color: #333;
+  font-family: 'Fredoka One', cursive;
+  color: white;
   font-size: 1.8rem;
   border-bottom: 3px solid #AC0202 !important;
   display: inline-block;
@@ -10123,5 +10123,5 @@ trix-editor {
   }
 }
 * {
-  font-family: "Stylish", sans-serif;
+  font-family:'Fredoka One', cursive;
 }

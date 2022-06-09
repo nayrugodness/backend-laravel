@@ -94,7 +94,7 @@
             </div>
         </nav>-->
         <nav class="navbar-hoisu">
-            <ul id="header">
+            <ul id="header" style="background-color:transparent;">
                 <a href="{{ url('/') }}" id="brand">
                 <li>
                     {{ config('app.name', 'Hoisu') }}
@@ -102,7 +102,7 @@
                 </a>
                 <label id="trigger2" for="x7"><img src="{{ asset('js/menu.png') }}" style="width:1.5rem; height:1.4rem;"></label>
             </ul>
-            <input type="checkbox" id="x7" />
+            <input type="checkbox" id="x7" style="display:none" />
             <ul id="main">
                 @guest
                     <a href="{{ route('login') }}">
