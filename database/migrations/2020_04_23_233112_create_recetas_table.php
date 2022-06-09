@@ -41,6 +41,16 @@ class CreateRecetasTable extends Migration
             $table->foreignId('ciudad_id')->references('id')->on('ciudad_recetas')->comment('La ciudad de la receta');
             $table->timestamps();
         });
+
+        Schema::create('reserva', function (Blueprint $table) {
+            $table->id();
+            $table->string('email')->unique();
+            $table->string('telefono');
+            $table->time('hora');
+            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la receta');
+            $table->foreignId('receta_id')->references('id')->on('recetas')->comment('El restaurante al que se reserva');
+            $table->timestamps();
+        });
     }
 
     /**
