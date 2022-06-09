@@ -15,7 +15,7 @@
                         type="search"
                         name="buscar"
                         class="form-control"
-                        placeholder="Buscar Restaurante"
+                        placeholder="Buscar restaurante"
                     />
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="card-body h-100">
                         <h3>{{ Str::title( $nueva->titulo ) }}</h3>
 
-                        <p> {{ Str::words(  strip_tags( $nueva->descripcion ), 15 ) }} </p>
+                        <p style="color:black;"> {{ Str::words(  strip_tags( $nueva->descripcion ), 15 ) }} </p>
 
                         <a href=" {{ route('recetas.show', ['receta' => $nueva->id ]) }} "
                             class="btn btn-primary d-block font-weight-bold text-uppercase"
@@ -58,19 +58,5 @@
         </div>
     </div>
 
-    @foreach($recetas as $key => $grupo )
-        <div class="container">
-            <h2 class="titulo-categoria text-uppercase mt-5 mb-4"> {{ str_replace('-', ' ',  $key) }} </h2>
-            
-            <div class="row">
-                @foreach($grupo as $recetas)
-                    @foreach($recetas as $receta)
-                        @include('ui.receta')
-                    @endforeach
-                @endforeach
-            </div>
-        </div>
-
-    @endforeach
 
 @endsection

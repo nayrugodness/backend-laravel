@@ -15,13 +15,13 @@
                 <p class="text-primary fecha font-weight-bold">
                     {{ $receta->ciudad->nombre }}
                 </p>
-                <p> {{ count( $receta->likes ) }} Les gustó</p> 
+                <p style="color:black;"> {{ count( $receta->likes ) }} Les gustó</p> 
             </div>
         
-            <p> {{ Str::words(  strip_tags( $receta->descripcion ), 20, ' ...' ) }} </p>
+            <p style="color:black;"> {{ Str::words(  strip_tags( $receta->descripcion ), 20, ' ...' ) }} </p>
 
             <a href="{{ route('recetas.show', ['receta' => $receta->id ])}}"
-            class="btn btn-primary d-block font-weight-bold text-uppercase">Ver restaurante
+            class="btn btn-primary d-block font-weight-bold text-uppercase">Ver más...
             </a>
         </div>
     </div>
