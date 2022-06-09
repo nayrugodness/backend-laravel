@@ -141,16 +141,15 @@
                             {{ 'ver mis reservaciones'}}
                         </li>
                     </a>
-                    <a href="{{ route('logout') }}" 
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                        <li>
-                        {{ __('Logout') }}
-                        </li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
+                    <a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <li>{{ __('Logout') }}</li>
                     </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </ul>
                 @endguest
             </ul>
