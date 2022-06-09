@@ -18,7 +18,19 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+        // auth()->user()->recetas->dd();
+        // $recetas = auth()->user()->recetas->paginate(2);
+
+        $usuario = auth()->user();
+
+        // Reservas con paginación
+        $reservas = Reserva::where('user_id', $usuario->id)->paginate(10);
+        //$ciudades = Ciudad::where('user_id', $usuario->id)->paginate(2);
+
+        return view('reservas.index')
+            ->with('reservas', $reservas)
+            ->with('usuario', $usuario);
+            //->with('ciudades', $ciudades);
     }
 
     /**
