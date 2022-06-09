@@ -26,7 +26,7 @@ Route::delete('/recetas/{receta}', 'RecetaController@destroy')->name('recetas.de
 
 Route::get('/categoria/{categoriaReceta}', 'CategoriasController@show')->name('categorias.show');
 Route::get('/reserva', 'ReservaController@index')->name('reservas.index');
-Route::get('/reserva/create', 'ReservaController@create')->name('reservas.create');
+Route::get('/reserva/{receta}/create', 'ReservaController@create')->name('reservas.create');
 // Buscador de Recetas
 Route::get('/buscar', 'RecetaController@search')->name('buscar.show');
 

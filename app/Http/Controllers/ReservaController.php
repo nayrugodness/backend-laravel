@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\CategoriaReceta;
+use App\CiudadReceta;
+use App\Receta;
 use App\Reserva;
 use Illuminate\Http\Request;
 
@@ -38,13 +41,12 @@ class ReservaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Receta $receta)
     {
         $usuario = auth()->user();
-        $receta = Receta::all(['id', 'nombre']);
+        //$receta = Receta::all(['id', 'nombre']);
 
-        return view('reservas.create')->with('usuario', $usuario)
-        ->with('receta', $receta);
+        return view('reservas.create')->with('usuario', $usuario)->with('receta', $receta);
     }
 
     /**
