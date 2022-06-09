@@ -16,8 +16,8 @@ class UsuarioSeeder extends Seeder
     {
 
         User::create([
-            'name' => 'Juan',
-            'email' => 'correo@correo.com',
+            'name' => 'Nayru',
+            'email' => 'nayru@gmail.com',
             'password' => Hash::make('12345678'),
             'url' => 'http://codigoconjuan.com',
         ]);
