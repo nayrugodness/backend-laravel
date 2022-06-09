@@ -102,7 +102,21 @@ class ReservaController extends Controller
      */
     public function update(Request $request, Reserva $reserva)
     {
-        //
+         // Revisar el policy
+         $this->authorize('update', $reserva);
+
+         // validación
+         $data = $request->validate([
+            'hora' => 'date_format:H:i',
+            'fecha' => 'date_format:Y:m:d',
+         ]);
+
+         // Asignar los valores
+        $reserva->hora = $data['hora'];
+        $reserva->fecha = $data['fecha'];
+
+        // redireccionar
+        return redirect()->action('ReservaController@index');
     }
 
     /**
@@ -113,6 +127,12 @@ class ReservaController extends Controller
      */
     public function destroy(Reserva $reserva)
     {
-        //
+         // Ejecutar el Policy
+         $this->authorize('delete', $receta);
+
+         // Eliminar la receta
+         $reserva->delete();
+ 
+         return redirect()->action('ReservaController@index');
     }
 }
