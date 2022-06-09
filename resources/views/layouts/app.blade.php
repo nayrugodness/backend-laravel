@@ -183,7 +183,7 @@
                     @yield('botones')
                 </div>
 
-                <main class="py-3 mt-2 col-12" style="text-align:center;">
+                <main class="py-3 col-12" style="text-align:center;">
                     @yield('content')
                 </main>
             </div>
