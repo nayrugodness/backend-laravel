@@ -31,7 +31,7 @@
     <link href="{{ asset('css/nav.css' ) }}" rel="stylesheet">
 </head>
 <body>
-    < id="app">
+    <div id="app">
        <!-- <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
