@@ -62,7 +62,6 @@ class PerfilController extends Controller
         // Validar
         $data = request()->validate([
             'nombre' => 'required',
-            'url' => 'required',
             'biografia' => 'required'
         ]);
 
@@ -80,12 +79,10 @@ class PerfilController extends Controller
         } 
 
         // Asignar nombre y URL
-        auth()->user()->url = $data['url'];
         auth()->user()->name = $data['nombre'];
         auth()->user()->save();
 
         // Eliminar url y name de $data
-        unset($data['url']);
         unset($data['nombre']);
 
 
