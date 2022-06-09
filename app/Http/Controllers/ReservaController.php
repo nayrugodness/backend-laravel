@@ -55,7 +55,20 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'hora' => 'date_format:H:i',
+            'fecha' => 'date_format:Y:m:d',
+
+        ]);
+
+        // almacenar en la BD (con modelo)
+        auth()->user()->reservas()->create([
+            
+            'hora' => $data['hora'],
+            'fecha' => $data['fecha']
+       ]);
+        // Redireccionar
+        return redirect()->action('ReservaController@index');
     }
 
     /**
