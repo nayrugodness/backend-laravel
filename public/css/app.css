@@ -32,8 +32,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Stylish", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: "Fredoka One", cursive;
+  --font-family-monospace:"Fredoka One", cursive ;
 }
 
 *,
@@ -43,7 +43,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Fredoka One", cursive;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Stylish", sans-serif;
+  font-family: "Fredoka One", cursive;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -176,7 +176,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1em;
 }
 
@@ -3980,7 +3980,6 @@ input[type=button].btn-block {
   padding-top: 0.275rem;
   padding-bottom: 0.275rem;
   margin-right: 1rem;
-  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -10000,6 +9999,9 @@ trix-editor {
   display: inline-block;
   padding-bottom: 0.5rem;
   padding-right: 2rem;
+}
+.titulo-categoria p{
+  color: #0000;
 }
 
 .btn-receta,

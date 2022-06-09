@@ -94,13 +94,13 @@
             </div>
         </nav>-->
         <nav class="navbar-hoisu">
-            <ul id="header" style="height:3rem;">
+            <ul id="header">
                 <a href="{{ url('/') }}" id="brand">
                 <li>
                     {{ config('app.name', 'Hoisu') }}
                 </li>
                 </a>
-                <label id="trigger2" for="x7"><img src="{{ asset('js/menu.png') }}" style="width:2rem; height:2rem;"></label>
+                <label id="trigger2" for="x7"><img src="{{ asset('js/menu.png') }}" style="width:1.5rem; height:1.4rem;"></label>
             </ul>
             <input type="checkbox" id="x7" />
             <ul id="main">
