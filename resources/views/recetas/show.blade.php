@@ -30,13 +30,19 @@
               <h4 style="color: white;">{{ $receta->ciudad->nombre }}</h4>
             </div>
           </div>
-          <div class="p-4 text-black" style="background-color: #f8f9fa;">
-            <div class="d-flex justify-content-end text-center py-1">
+          <div class="p-4 text-black" style="
+                background-color: #f8f9fa;">
+            <div class="d-flex justify-content-center text-center"
+                    style="
+                        display:flex;
+                        flex-direction: row;
+                        flex-wrap:wrap;
+                ">
               <div>
                 <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->direccion}}</p>
                 <p class="small text-muted mb-0">Dirección</p>
               </div>
-              <div class="px-3">
+              <div>
                 <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->ciudad->nombre}}</p>
                 <p class="small text-muted mb-0">Ciudad</p>
               </div>
