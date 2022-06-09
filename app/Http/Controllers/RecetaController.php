@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\CategoriaReceta;
 use App\CiudadReceta;
 use App\Receta;
+use App\Reserva;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
