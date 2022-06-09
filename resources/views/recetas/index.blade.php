@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h2 class="text-center mb-5">Administra tus restaurantes</h2>
+    <h2 class="text-center mb-5" style="color: white;">Administra tus restaurantes</h2>
 
     <div class="col-md-10 mx-auto bg-white p-3">
         <table class="table">
@@ -58,7 +58,7 @@
                     @endforeach
                 </ul>
             @else
-                <p class="text-center" style="font-size:1.5rem;">Aún no tienes restaurantes favoritos guardados
+                <p class="text-center" style="font-size:1.5rem; color:black;">Aún no tienes restaurantes favoritos guardados
                     <small> Dale me gusta a los restaurantes y aparecerán aquí</small>
                 </p>
 
