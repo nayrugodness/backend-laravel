@@ -60,16 +60,17 @@
               </div>
             </div>
           </div>
-          <div class="card-body p-4 text-black">
+          <div class="card-body p-4 text-black" >
             <div class="mb-5">
-              <p class="lead fw-normal mb-1">About</p>
+              <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Descripción</p>
               <div class="p-4" style="background-color: #f8f9fa;">
-                <p class="font-italic mb-1">Web Developer</p>
+                <!--<p class="font-italic mb-1">Web Developer</p>
                 <p class="font-italic mb-1">Lives in New York</p>
-                <p class="font-italic mb-0">Photographer</p>
+                <p class="font-italic mb-0">Photographer</p>-->
+                <p style="color:black;"> {!! $receta->descripcion !!}</p>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <!---<div class="d-flex justify-content-between align-items-center mb-4">
               <p class="lead fw-normal mb-0">Recent photos</p>
               <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
             </div>
@@ -92,7 +93,7 @@
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
                   alt="image 1" class="w-100 rounded-3">
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>

@@ -159,6 +159,37 @@
                         @enderror
                     </div>
 
+                    <div class="form-group">
+                            <label for="nombre">Hora Apertura:</label>
+                            <input
+                                type="time"
+                                class="form-control @error('apertura')  is-invalid  @enderror"
+                                id="apertura"
+                                name="apertura"
+                                value="{{ old('apertura') }}"
+                            >
+                            @error('apertura')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                    </div>
+
+                        <div class="form-group">
+                            <label for="nombre">Hora Cierre:</label>
+                            <input
+                                type="time"
+                                class="form-control @error('cierre')  is-invalid  @enderror"
+                                id="cierre"
+                                name="cierre"
+                                value="{{ old('cierre') }}"
+                            >
+                            @error('cierre')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                            @enderror
+                        </div>
                     
                     <div class="form-group mt-3">
                         <label  style="font-size:1.5rem;" for="imagen">Elige la  imagen principal de tu restaurante</label>
@@ -169,6 +200,7 @@
                             class="form-control @error('imagen') is-invalid @enderror"
                             name="imagen"
                         >
+                        
 
                         <div class="mt-2">
                             <p style="font-size:1.5rem;">Imagen Actual:</p>
