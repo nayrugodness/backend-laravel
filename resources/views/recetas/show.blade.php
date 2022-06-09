@@ -33,16 +33,24 @@
           <div class="p-4 text-black" style="background-color: #f8f9fa;">
             <div class="d-flex justify-content-end text-center py-1">
               <div>
-                <p class="mb-1 h5" style="color:#AC0202;">253</p>
-                <p class="small text-muted mb-0">Photos</p>
+                <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->direccion}}</p>
+                <p class="small text-muted mb-0">Dirección</p>
               </div>
               <div class="px-3">
-                <p class="mb-1 h5" style="color:#AC0202;">1026</p>
-                <p class="small text-muted mb-0">Followers</p>
+                <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->ciudad->nombre}}</p>
+                <p class="small text-muted mb-0">Ciudad</p>
               </div>
               <div>
-                <p class="mb-1 h5" style="color:#AC0202;">478</p>
-                <p class="small text-muted mb-0">Following</p>
+                <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->categoria->nombre}}</p>
+                <p class="small text-muted mb-0">Categoría</p>
+              </div>
+              <div>
+                <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->apertura}}</p>
+                <p class="small text-muted mb-0">Hora de apertura</p>
+              </div>
+              <div>
+                <p class="mb-1 h5" style="color:#AC0202;">{{ $receta->cierre}}</p>
+                <p class="small text-muted mb-0">Hora de cierre</p>
               </div>
             </div>
           </div>
