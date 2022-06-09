@@ -40,7 +40,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        $usuario = User::all(['id', 'nombre']);
+        $usuario = auth()->user();
         $receta = Receta::all(['id', 'nombre']);
 
         return view('reservas.create')->with('usuario', $usuario)
