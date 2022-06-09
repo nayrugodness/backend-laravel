@@ -11,9 +11,6 @@ class ReservasSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('reserva')->insert([
-            'hora' => time('H:i:s'),
-            'fecha' => date('Y-m-d'),
-        ]);
+        //
     }
 }
