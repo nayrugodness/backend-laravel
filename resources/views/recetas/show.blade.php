@@ -1,70 +1,88 @@
 @extends ('layouts.app')
 
-
+@yield('styles')
 
 @section('content')
 
-    {{-- <h1>{{ $receta}}</h1> --}}
-
-    <article class="contenido-receta bg-white p-5 shadow" style="font-size:2rem;">
-        <h1 class="text-center mb-4">{{$receta->titulo}}</h1>
-
-        <div class="imagen-receta">
-            <img src="/storage/{{ $receta->imagen }}" class="w-100">
-        </div>
-
-        <div class="receta-meta mt-2">
-            <p style="display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-evenly;  ">
-                <span class="font-weight-bold text-primary" style="font-size:1.5rem;"></span>
-                <a class="text-dark" style="font-size:1.5rem;" href="{{ route('categorias.show', ['categoriaReceta' => $receta->categoria->id ]) }} ">
-                    {{$receta->categoria->nombre}}
-                </a>
-                <span class="text-primary" style="font-size:1.5rem;">{{$receta->ciudad->nombre}}</span>
-                <span class="text-secondary" style="font-size:1.5rem;">Quindío</span>
-            </p>
-
-            <!--<p>
-                <span class="font-weight-bold text-primary" >Autor:</span>
-                <a class="text-dark" href="{{ route('perfiles.show', ['perfil' => $receta->autor->id ]) }} ">
-                    {{$receta->autor->name}}
-                </a>
-
-            </p>-->
-
-            <!--<p>
-                <span class="font-weight-bold text-primary">Fecha:</span>
-                @php
-                    $fecha = $receta->created_at
-                @endphp
-
-                <fecha-receta fecha="{{$fecha}}" ></fecha-receta>
-            </p>-->
-
-
-            <div style="">
-                <div class="" style="font-size:1.3rem;">
-                    <h2 class="text-primary"></h2>
-                    {!! $receta->descripcion !!}
-                </div>
-
-                <div class="display:flex; flex-direction:row; flex-wrap: nowrap;">
-                    <h3 class="text-primary mt-4" style="font-size:1.3rem;">Correo electrónico: {!! $receta->email!!}</h3>
-                    <h3 class="text-secondary mt-4" style="font-size:1.3rem;">Teléfono: {!! $receta->telefono !!}</h3>
-                </div>
+<section class="h-100 gradient-custom-2" style="width:100%; padding:0;">
+  <div class="container h-100" style="width: 100%; padding:0;">
+    <div class="row d-flex justify-content-center align-items-center h-100" style="width: 100%;margin:0; padding:0;">
+      <div class="col-12">
+        <div class="card">
+          <div class="rounded-top d-flex flex-row" style="
+          background-image: url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+           height:340px; padding:2rem; 
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           ">
+            <!--<div class="ms-4 mt-5 d-flex flex-column" style="width: 250px;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                style="width: 150px; z-index: 1">
+              <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                style="z-index: 1;">
+                Edit profile
+              </button>
+            </div>-->
+            <div class="" style="margin-top: 10rem;">
+              <h2 style="color: white; text-transform:uppercase; font-weight:600;">{{ $receta->titulo }}</h2>
+              <h4 style="color: white;">{{ $receta->ciudad->nombre }}</h4>
             </div>
-            
-
-            <div class="justify-content-center row text-center">
-                <like-button
-                    receta-id="{{$receta->id}}"
-                    like="{{$like}}"
-                    likes="{{$likes}}"
-                ></like-button>
+          </div>
+          <div class="p-4 text-black" style="background-color: #f8f9fa;">
+            <div class="d-flex justify-content-end text-center py-1">
+              <div>
+                <p class="mb-1 h5">253</p>
+                <p class="small text-muted mb-0">Photos</p>
+              </div>
+              <div class="px-3">
+                <p class="mb-1 h5">1026</p>
+                <p class="small text-muted mb-0">Followers</p>
+              </div>
+              <div>
+                <p class="mb-1 h5">478</p>
+                <p class="small text-muted mb-0">Following</p>
+              </div>
             </div>
-
-
-
-
+          </div>
+          <div class="card-body p-4 text-black">
+            <div class="mb-5">
+              <p class="lead fw-normal mb-1">About</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                <p class="font-italic mb-1">Web Developer</p>
+                <p class="font-italic mb-1">Lives in New York</p>
+                <p class="font-italic mb-0">Photographer</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="lead fw-normal mb-0">Recent photos</p>
+              <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+            </div>
+            <div class="row g-2">
+              <div class="col mb-2">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col mb-2">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                  alt="image 1" class="w-100 rounded-3">
+              </div>
+            </div>
+          </div>
         </div>
-    </article>
+      </div>
+    </div>
+  </div>
+</section>
 @endsection
