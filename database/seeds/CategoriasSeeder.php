@@ -13,7 +13,12 @@ class CategoriasSeeder extends Seeder
     public function run()
     {
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Restaurante y cafetería',
+            'nombre' => 'Café',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+        DB::table('categoria_recetas')->insert([
+            'nombre' => 'Turístico',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -38,7 +43,7 @@ class CategoriasSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Restaurante Bar',
+            'nombre' => 'Bar',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
