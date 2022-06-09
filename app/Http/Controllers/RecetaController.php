@@ -136,8 +136,9 @@ class RecetaController extends Controller
      */
     public function show(Receta $receta)
     {
+    
         // Obtener si el usuario actual le gusta la receta y esta autenticado
-        $like = ( auth()->user() ) ?  auth()->user()->meGusta->contains($receta->id) : false; 
+        $like = ( auth()->user() ) ?  auth()->user()->meGusta->contains($receta->id) : false;
 
         // Pasa la cantidad de likes a la vista
         $likes = $receta->likes->count();
