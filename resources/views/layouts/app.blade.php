@@ -174,7 +174,7 @@
         </nav>-->
 
         @yield('hero')
-       
+        <div class="" style="width:100vw; height:1rem; background:transparent; margin-top:4rem;"></div>
         <div class="container">
             <div class="row">
                 <div class="py-6 mt-4 col-12">

@@ -21,7 +21,7 @@
             </div>
         </form>
     </div>
-    <div class="" style="width:100vw; height: 4rem;"></div>
+    
 @endsection
 
 @section('content')
