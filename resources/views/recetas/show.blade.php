@@ -85,11 +85,11 @@
             </div>
             <div class="row g-2">
               <div class="col">
-                <img src="https://images.pexels.com/photos/2337774/pexels-photo-2337774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://images.pexels.com/photos/8856503/pexels-photo-8856503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="image 1" class="w-100 rounded-3">
               </div>
               <div class="col">
-                <img src="https://www.pexels.com/photo/plates-and-glasses-on-the-table-8856503/"
+                <img src="https://www.pexels.com/photo/blur-breakfast-chef-cooking-262978/"
                   alt="image 1" class="w-100 rounded-3">
               </div>
               
