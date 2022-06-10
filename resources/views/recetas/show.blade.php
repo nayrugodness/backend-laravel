@@ -94,6 +94,15 @@
               </div>
               
             </div>
+            <div class="mb-5">
+              <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Descripción</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                <!--<p class="font-italic mb-1">Web Developer</p>
+                <p class="font-italic mb-1">Lives in New York</p>
+                <p class="font-italic mb-0">Photographer</p>-->
+                <p style="color:black;"> {!! $receta->descripcion !!}</p>
+              </div>
+            </div>
             <a href="/reserva/{{$receta->id}}/create" class="btn btn-primary mt-4" style="text-decoration:none; width: 100%; font-size: 2rem;">Reservar</a>
           </div>
         </div>
