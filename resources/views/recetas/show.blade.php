@@ -71,28 +71,51 @@
               </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="fw-normal mb-0" style="color: #AC0202; font-size: 2rem;">Menú</p>
+              <p class="fw-normal mb-0" style="color: #AC0202; font-size: 2rem;">Fotos del restaurante</p>
             </div>
             <div class="row g-2">
               <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                <img src="https://images.pexels.com/photos/612790/pexels-photo-612790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="image 1" class="w-100 rounded-3">
               </div>
               <div class="col mb-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                <img src="https://images.pexels.com/photos/612790/pexels-photo-612790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="image 1" class="w-100 rounded-3">
               </div>
             </div>
             <div class="row g-2">
               <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                <img src="https://images.pexels.com/photos/612790/pexels-photo-612790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="image 1" class="w-100 rounded-3">
               </div>
               <div class="col">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                <img src="https://images.pexels.com/photos/612790/pexels-photo-612790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="image 1" class="w-100 rounded-3">
               </div>
               
+            </div>
+            <div class="mb-5">
+              <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Menú</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                <!--<p class="font-italic mb-1">Web Developer</p>
+                <p class="font-italic mb-1">Lives in New York</p>
+                <p class="font-italic mb-0">Photographer</p>-->
+                <div class="rounded-top d-flex flex-row" style="
+                  background-image: url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                  height:340px; padding:2rem; 
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  ">
+                  </div>
+              </div>
+            </div>
+            <div class="justify-content-center row text-center">
+                <like-button
+                    receta-id="{{$receta->id}}"
+                    like="{{$like}}"
+                    likes="{{$likes}}"
+                ></like-button>
             </div>
             <a href="/reserva/{{$receta->id}}/create" class="btn btn-primary mt-4" style="text-decoration:none; width: 100%; font-size: 2rem;">Reservar</a>
           </div>
