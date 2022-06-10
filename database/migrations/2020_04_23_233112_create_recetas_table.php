@@ -42,7 +42,7 @@ class CreateRecetasTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('reserva', function (Blueprint $table) {
+        Schema::create('reservas', function (Blueprint $table) {
             $table->id();
             $table->string('fecha'); 
             $table->time('hora');

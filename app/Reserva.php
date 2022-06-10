@@ -22,7 +22,7 @@ class Reserva extends Model
     // Obtiene el restaurante via FK
     public function receta()
     {
-       return $this->belongsTo(Receta::class);
+       return $this->belongsTo(Receta::class, 'receta_id');
     }
 
     // Obtiene la información del usuario via FK

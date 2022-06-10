@@ -59,16 +59,20 @@ class ReservaController extends Controller
     {
         $data = $request->validate([
             'hora' => 'date_format:H:i',
-            'fecha' => 'date_format:Y:m:d',
+            'fecha' => 'date_format:Y-m-d',
+            'user_id' => 'required',
+            'receta_id' => 'required'
 
         ]);
 
         // almacenar en la BD (con modelo)
-        auth()->user()->reservas()->create([
-            
+        auth()->user()->reserva()->create([
+            'user_id' => $data['user_id'],
+            'receta_id' => $data['receta_id'],
+
             'hora' => $data['hora'],
             'fecha' => $data['fecha']
-       ]);
+        ]);
         // Redireccionar
         return redirect()->action('ReservaController@index');
     }

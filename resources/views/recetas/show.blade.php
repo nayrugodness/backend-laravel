@@ -70,9 +70,8 @@
                 <p style="color:black;"> {!! $receta->descripcion !!}</p>
               </div>
             </div>
-            <!---<div class="d-flex justify-content-between align-items-center mb-4">
-              <p class="lead fw-normal mb-0">Recent photos</p>
-              <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="fw-normal mb-0" style="color: #AC0202; font-size: 2rem;">Menú</p>
             </div>
             <div class="row g-2">
               <div class="col mb-2">
@@ -93,7 +92,9 @@
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
                   alt="image 1" class="w-100 rounded-3">
               </div>
-            </div>-->
+              
+            </div>
+            <a href="/reserva/{{$receta->id}}/create" class="btn btn-primary mt-4" style="text-decoration:none; width: 100%; font-size: 2rem;">Reservar</a>
           </div>
         </div>
       </div>

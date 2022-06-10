@@ -56,9 +56,9 @@ class User extends Authenticatable
         return $this->hasMany(Receta::class);
     }
     /** Relación 1:n de Usuario a Reservas */
-    public function reservas()
+    public function reserva()
     {
-        return $this->hasMany(Reservas::class);
+        return $this->hasMany(Reserva::class);
     }
 
     // Relación 1:1 de usuario y perfil
