@@ -110,6 +110,13 @@
                   </div>
               </div>
             </div>
+            <div class="justify-content-center row text-center">
+                <like-button
+                    receta-id="{{$receta->id}}"
+                    like="{{$like}}"
+                    likes="{{$likes}}"
+                ></like-button>
+            </div>
             <a href="/reserva/{{$receta->id}}/create" class="btn btn-primary mt-4" style="text-decoration:none; width: 100%; font-size: 2rem;">Reservar</a>
           </div>
         </div>
