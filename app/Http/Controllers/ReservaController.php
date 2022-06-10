@@ -83,7 +83,7 @@ class ReservaController extends Controller
      */
     public function show(Reserva $reserva)
     {
-        //
+        
     }
 
     /**
@@ -94,7 +94,14 @@ class ReservaController extends Controller
      */
     public function edit(Reserva $reserva)
     {
-        //
+        // Revisar el policy
+        $this->authorize('view', $reserva);
+
+        // Con modelo
+        //$categorias = Receta::all(['id', 'nombre']);
+        $reserva = Reserva::all(['id']);
+
+        return view('reservas.edit', compact('reserva'));
     }
 
     /**
@@ -132,9 +139,9 @@ class ReservaController extends Controller
     public function destroy(Reserva $reserva)
     {
          // Ejecutar el Policy
-         $this->authorize('delete', $receta);
+         
 
-         // Eliminar la receta
+         // Eliminar la reserva
          $reserva->delete();
  
          return redirect()->action('ReservaController@index');

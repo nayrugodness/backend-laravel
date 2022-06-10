@@ -133,12 +133,12 @@
                     </a>
                     <a href="{{ route('recetas.index') }}">
                         <li>
-                            {{ 'Administrar mis restaurantes' }}
+                            {{ 'Mis restaurantes restaurantes' }}
                         </li>
                     </a>
-                    <a href="">
+                    <a href="{{ route('reservas.index') }}">
                         <li>
-                            {{ 'ver mis reservaciones'}}
+                            {{ 'Mis reservaciones'}}
                         </li>
                     </a>
                     <a  href="{{ route('logout') }}"
