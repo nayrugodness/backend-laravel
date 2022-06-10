@@ -27,12 +27,10 @@ class ReservaController extends Controller
         $usuario = auth()->user();
 
         // Reservas con paginación
-        //$reservas = Reserva::where('user_id', $usuario->id)->paginate(10);
-        //$ciudades = Ciudad::where('user_id', $usuario->id)->paginate(2);
+        $reservas = Reserva::where('user_id', $usuario->id)->paginate(10);
+        $restaurante = Reserva::where('user_id', $usuario->id)->paginate(10);
 
-        return view('reservas.index');
-            //->with('reservas', $reservas)
-            //->with('usuario', $usuario);
+        return view('reservas.index')->with('reservas', $reservas)->with('restaurante', $restaurante);
             //->with('ciudades', $ciudades);
     }
 
