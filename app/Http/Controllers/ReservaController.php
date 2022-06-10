@@ -95,13 +95,14 @@ class ReservaController extends Controller
     public function edit(Reserva $reserva)
     {
         // Revisar el policy
-        $this->authorize('view', $reserva);
+        //$this->authorize('view', $reserva);
 
         // Con modelo
         //$categorias = Receta::all(['id', 'nombre']);
-        $reserva = Reserva::all(['id']);
+        $usuario = Reserva::all(['id', 'user_id']);
+        $receta = Receta::all(['id']);
 
-        return view('reservas.edit', compact('reserva'));
+        return view('reservas.edit', compact('reserva', 'receta', 'usuario'));
     }
 
     /**
@@ -114,12 +115,12 @@ class ReservaController extends Controller
     public function update(Request $request, Reserva $reserva)
     {
          // Revisar el policy
-         $this->authorize('update', $reserva);
+         //$this->authorize('update', $reserva);
 
          // validación
          $data = $request->validate([
             'hora' => 'date_format:H:i',
-            'fecha' => 'date_format:Y:m:d',
+            'fecha' => 'date_format:Y-m-d',
          ]);
 
          // Asignar los valores

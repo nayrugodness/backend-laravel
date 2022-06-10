@@ -33,7 +33,9 @@
                                 reserva-id={{$reserva->id}}
                             ></eliminar-receta>
 
-                            
+                            <a href="{{ route('reservas.edit', ['reserva' => $reserva->id]) }} " class="btn btn-dark d-block mb-2">Editar</a>
+                            <a href="{{ route('reservas.show', ['reserva' => $reserva->id]) }} " class="btn btn-success d-block">Ver</a>
+                      
                         </td>
                     </tr>
                 @endforeach
