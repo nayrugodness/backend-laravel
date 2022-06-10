@@ -95,12 +95,19 @@
               
             </div>
             <div class="mb-5">
-              <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Descripción</p>
+              <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Menú</p>
               <div class="p-4" style="background-color: #f8f9fa;">
                 <!--<p class="font-italic mb-1">Web Developer</p>
                 <p class="font-italic mb-1">Lives in New York</p>
                 <p class="font-italic mb-0">Photographer</p>-->
-                <p style="color:black;"> {!! $receta->descripcion !!}</p>
+                <div class="rounded-top d-flex flex-row" style="
+                  background-image: url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                  height:340px; padding:2rem; 
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  ">
+                  </div>
               </div>
             </div>
             <a href="/reserva/{{$receta->id}}/create" class="btn btn-primary mt-4" style="text-decoration:none; width: 100%; font-size: 2rem;">Reservar</a>
