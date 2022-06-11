@@ -15,6 +15,9 @@ class AppServiceProvider extends ServiceProvider
     public function register(){
         //add this
         Schema::defaultStringLength(191);
+        $this->app->bind('path.public', function() {
+            return realpath(base_path().'/../public_html');
+        });
      }
 
     /**
