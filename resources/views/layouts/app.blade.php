@@ -32,11 +32,9 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< HEAD
+
        <!-- <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
-=======
-        <!--<nav class="navbar navbar-expand-md navbar-light bg-primary shadow-s barra">
->>>>>>> aaff34753ec636c46bd0d389e4b6abb14a7067c0
+
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Hoisu') }}
@@ -46,22 +44,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<<<<<<< HEAD
-                    
-=======
-                   
->>>>>>> aaff34753ec636c46bd0d389e4b6abb14a7067c0
                     <ul class="navbar-nav mr-auto">
                     </ul>
 
-<<<<<<< HEAD
-                    <ul class="navbar-nav ml-auto">
-                        
-=======
                    
                     <ul class="navbar-nav ml-auto">
                        
->>>>>>> aaff34753ec636c46bd0d389e4b6abb14a7067c0
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -107,7 +96,7 @@
                 </div>
             </div>
         </nav>-->
-<<<<<<< HEAD
+
         <nav class="navbar-hoisu">
             <ul id="header" style="background-color:transparent;">
                 <a href="{{ url('/') }}" id="brand">

@@ -7,12 +7,12 @@
 @section('content')
     <h2 class="text-center mb-5" style="color: white;">Administra tus restaurantes</h2>
 
-    <div class="col-md-10 mx-auto bg-white p-3">
+    <div class="col-md-10 col-lg-10 col-sm-10 mx-auto bg-white p-3">
         <table class="table">
             <thead class="bg-primary text-light">
                 <tr>
                     <th scole="col">Nombre</th>
-                    <th scole="col">Ciudad</th>
+                    <!--<th scole="col">Ciudad</th>-->
                     <th scole="col">Categoría</th>
                     <th scole="col">Acciones</th>
                 </tr>
@@ -23,7 +23,7 @@
                 @foreach ($recetas as $receta)
                     <tr>
                         <td> {{$receta->titulo}} </td>
-                        <td>{{ $receta->ciudad->nombre}}</td>
+                        <!--<td>{{ $receta->ciudad->nombre}}</td>-->
                         <td> {{$receta->categoria->nombre}} </td>
                         <td>
 
@@ -39,13 +39,13 @@
             </tbody>
         </table>
 
-        <div class="col-12 mt-4 justify-content-center d-flex">
+        <!--<div class="col-12 mt-4 justify-content-center d-flex">
             {{ $recetas->links() }}
-        </div>
+        </div>-->
 
 
-        <h2 class="text-center my-5">Restaurantes que te gustan</h2>
-        <div class="col-md-10 mx-auto bg-white p-3">
+        <!--<h2 class="text-center my-5">Restaurantes que te gustan</h2>-->
+        <!--<div class="col-md-10 mx-auto bg-white p-3">
 
             @if ( count( $usuario->meGusta ) > 0 )
                 <ul class="list-group">
@@ -63,7 +63,7 @@
                 </p>
 
             @endif
-        </div>
+        </div>-->
 
     </div>
 
