@@ -235,6 +235,22 @@
                             </span>
                         @enderror
                     </div>
+                    <div class="form-group mt-4">
+                        <label for="menu" style="font-size:1.5rem;">Añade el menú de tu restaurante</label>
+
+                        <input style="font-size:1.5rem;"
+                            id="menu" 
+                            type="file" 
+                            class="form-control @error('menu') is-invalid @enderror"
+                            name="menu"
+                        >
+
+                        @error('menu')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Agregar restaurante" style="width:100%; padding-top:0.5rem;font-size:1.5rem;" >
