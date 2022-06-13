@@ -70,7 +70,7 @@
                 <p style="color:black;"> {!! $receta->descripcion !!}</p>
               </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <!---<div class="d-flex justify-content-between align-items-center mb-4">
               <p class="fw-normal mb-0" style="color: #AC0202; font-size: 2rem;">Fotos del restaurante</p>
             </div>
             <div class="row g-2">
@@ -93,7 +93,7 @@
                   alt="image 1" class="w-100 rounded-3">
               </div>
               
-            </div>
+            </div>-->
             <div class="mb-5">
               <p class="lead fw-normal mb-1" style="color:#AC0202; padding-bottom: 1rem;">Menú</p>
               <div class="p-4" style="background-color: #f8f9fa;">
