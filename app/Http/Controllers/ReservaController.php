@@ -147,4 +147,16 @@ class ReservaController extends Controller
  
          return redirect()->action('ReservaController@index');
     }
+    public function reservations(Reserva $reserva, Receta $receta, User $usuario)
+    {
+        //$usuario = auth()->user();
+        //$usuario = Reserva::where('user_id', $user->id)->paginate(10);
+
+        // Reservas con paginación
+        $reservas = Reserva::where('receta_id', $receta->id)->paginate(10);
+        //$user = Reserva::where('user_id', $user->id)->paginate(10);
+
+        return view('reservas.reservations')->with('reservas', $reservas);//->with('restaurante', $restaurante);
+            //->with('ciudades', $ciudades);
+    }
 }
