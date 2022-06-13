@@ -81,6 +81,7 @@ class RecetaController extends Controller
             'descripcion' => 'required',
             //'ingredientes' => 'required',
             'imagen' => 'required|image',
+            'menu' => 'required|image',
             'apertura' => 'date_format:H:i',
             'cierre' => 'date_format:H:i|after:apertura',
             'categoria' => 'required',
@@ -93,7 +94,7 @@ class RecetaController extends Controller
 
         // obtener la ruta de la imagen
         $ruta_imagen = $request['imagen']->store('upload-recetas', 'public');
-
+        $ruta_imagen_menu = $request['menu']->store('upload-menus', 'public');
         // Resize de la imagen
         //$img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1000, 550);
         //$ruta_imagen->save();
@@ -114,6 +115,7 @@ class RecetaController extends Controller
              //'ingredientes' => $data['ingredientes'],
              'direccion' => $data['direccion'],
              'imagen' => $ruta_imagen,
+             'menu' => $ruta_imagen_menu,
              'apertura' => $data['apertura'],
              'cierre' => $data['cierre'],
              'email' => $data['email'],
@@ -183,6 +185,7 @@ class RecetaController extends Controller
             'descripcion' => 'required',
             'direccion' => 'required',
             'imagen' => 'required',
+            'menu' => 'required',
             'apertura' => 'date_format:H:i',
             'cierre' => 'date_format:H:i|after:apertura',
             'email' => 'required',
@@ -215,6 +218,10 @@ class RecetaController extends Controller
 
             // Asignar al objeto
             $receta->imagen = $ruta_imagen;
+        }
+        if(request('menu')){
+            $ruta_imagen_menu = $request['menu']->store('upload-menus', 'public');
+            $receta->menu = $ruta_imagen_menu;
         }
 
         $receta->save();
