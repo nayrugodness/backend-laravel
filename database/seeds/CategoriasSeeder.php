@@ -33,11 +33,6 @@ class CategoriasSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Vegetariano',
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s'),
-        ]);
-        DB::table('categoria_recetas')->insert([
             'nombre' => 'Gourmet',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
