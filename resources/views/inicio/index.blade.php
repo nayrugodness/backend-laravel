@@ -28,17 +28,28 @@
     
 
     <div class="container nuevas-recetas">
-        <h2 class="titulo-categoria text-uppercase mb-4">Nuevos Restaurantes</h2>
+        <h2 class="titulo-categoria text-uppercase mb-4" style="color:white;">Nuevos Restaurantes</h2>
 
         <div class="owl-carousel owl-theme">
             @foreach ($nuevas as $nueva)
                 <div class="card ">
-                    <img src="https://images.pexels.com/photos/4694556/pexels-photo-4694556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="imagen receta">
+                    <img src="/storage/{{ $nueva->imagen }}" class="card-img-top" alt="imagen receta">
 
                     <div class="card-body h-100">
                         <h3>{{ Str::title( $nueva->titulo ) }}</h3>
+                        <div class="m-2" style="
+                            display:flex;
+                            flex-direction:row;
+                            flex-wrap:wrap;
+                            color: grey;
+                            font-size:1.2rem;
+                            justify-content: space-evenly;">
+                            <h5>{{$nueva->ciudad->nombre}}</h5>
+                            <h5>{{$nueva->categoria->nombre}}</h5>
+                        </div>
+                       
 
-                        <p style="color:black;"> {{ Str::words(  strip_tags( $nueva->descripcion ), 15 ) }} </p>
+                        <!--<p style="color:black;"> {{ Str::words(  strip_tags( $nueva->descripcion ), 15 ) }} </p>-->
 
                         <a href=" {{ route('recetas.show', ['receta' => $nueva->id ]) }} "
                             class="btn btn-primary d-block font-weight-bold text-uppercase"
@@ -50,7 +61,7 @@
     </div>
 
     <div class="container">
-        <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Los mejores restaurantes</h2>
+        <h2 class="titulo-categoria text-uppercase mt-5 mb-4" style="color:white;">Los mejores restaurantes</h2>
         
         <div class="row">
             @foreach($votadas as $receta)
