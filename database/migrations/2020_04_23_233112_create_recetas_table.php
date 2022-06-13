@@ -47,7 +47,7 @@ class CreateRecetasTable extends Migration
             $table->id();
             $table->string('fecha'); 
             $table->time('hora');
-            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la receta');
+            $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que reserva');
             $table->foreignId('receta_id')->references('id')->on('recetas')->comment('El restaurante al que se reserva');
             $table->timestamps();
         });

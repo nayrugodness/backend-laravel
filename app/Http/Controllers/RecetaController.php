@@ -6,6 +6,7 @@ use App\CategoriaReceta;
 use App\CiudadReceta;
 use App\Receta;
 use App\Reserva;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -257,11 +258,16 @@ class RecetaController extends Controller
 
         return view('busquedas.show', compact('recetas', 'busqueda'));
     }
-    public function reservations(Receta $receta, Reserva $reserva)
+    public function reservations(Reserva $reserva, Receta $receta, User $usuario)
     {
-        $reserva = Reserva::where('receta_id', $receta->id)->paginate(10);
-        
+        //$usuario = auth()->user();
+        //$usuario = Reserva::where('user_id', $user->id)->paginate(10);
 
-        return view('reservas.reservations', compact('receta', 'reserva'));
+        // Reservas con paginación
+        $reservas = Reserva::where('receta_id', $receta->id)->paginate(10);
+        //$user = Reserva::where('user_id', $user->id)->paginate(10);
+
+        return view('recetas.reservations')->with('reservas', $reservas);//->with('restaurante', $restaurante);
+            //->with('ciudades', $ciudades);
     }
 }

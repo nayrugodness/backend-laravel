@@ -137,7 +137,7 @@
                     </a>
                     <a href="{{ route('recetas.index') }}">
                         <li>
-                            {{ 'Mis restaurantes restaurantes' }}
+                            {{ 'Mis restaurantes' }}
                         </li>
                     </a>
                     <a href="{{ route('reservas.index') }}">
