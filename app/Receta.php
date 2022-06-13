@@ -15,6 +15,7 @@ class Receta extends Model
         'email', 
         'telefono',  
         'imagen', 
+        'menu',
         'apertura',
         'cierre',
         'categoria_id', 
