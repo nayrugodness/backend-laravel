@@ -31,6 +31,7 @@ class CreateRecetasTable extends Migration
             //$table->text('ingredientes');
             $table->text('descripcion');
             $table->string('imagen');
+            $table->string('menu');
             $table->string('direccion');
             $table->string('email')->unique();
             $table->string('telefono');
