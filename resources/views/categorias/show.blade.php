@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="titulo-categoria text-uppercase mt-5 mb-4">
+        <h2 class="titulo-categoria text-uppercase mt-5 mb-4" style="color:white;">
             Categoria: {{ $categoriaReceta->nombre }}
         </h2>
 
