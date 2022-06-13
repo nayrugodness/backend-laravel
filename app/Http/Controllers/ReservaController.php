@@ -81,9 +81,9 @@ class ReservaController extends Controller
      * @param  \App\Reserva  $reserva
      * @return \Illuminate\Http\Response
      */
-    public function show(Reserva $reserva)
+    public function show(Reserva $reserva, Receta $receta)
     {
-        return view('reservas.show', compact('reserva'));
+        return view('reservas.show', compact('reserva', 'receta'));
     }
 
     /**

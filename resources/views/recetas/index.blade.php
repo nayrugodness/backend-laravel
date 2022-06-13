@@ -30,6 +30,7 @@
                         <td>
 
                             <a href="{{ route('recetas.edit', ['receta' => $receta->id]) }} " class="btn btn-info d-block mb-2">Editar</a>
+                           
                             <a href="{{ route('recetas.show', ['receta' => $receta->id]) }} " class="btn btn-success d-block" style="margin-bottom:0.5rem;">Ver</a>
                             <eliminar-receta
                                 receta-id={{$receta->id}}
