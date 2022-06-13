@@ -130,11 +130,11 @@
                         </li>
                     </a>
                     <ul id="dropdown">
-                    <a href="{{ route('perfiles.show', ['perfil' => Auth::user()->id ]) }}">
+                    <!--<a href="{{ route('perfiles.show', ['perfil' => Auth::user()->id ]) }}">
                         <li>
                             {{ 'Ver mi perfil' }}
                         </li>
-                    </a>
+                    </a>-->
                     <a href="{{ route('recetas.index') }}">
                         <li>
                             {{ 'Mis restaurantes' }}
