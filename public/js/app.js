@@ -61919,7 +61919,7 @@ var render = function() {
       on: { click: _vm.likeReceta }
     }),
     _vm._v(" "),
-    _c("p", { staticStyle: { "font-size": "1.2rem" } }, [
+    _c("p", { staticStyle: { "font-size": "1.5rem", color: "#AC0202" } }, [
       _vm._v(_vm._s(_vm.cantidadLikes) + " Les gustó este restaurante")
     ])
   ])

@@ -10,7 +10,7 @@
       <div class="col-12">
         <div class="card">
           <div class="rounded-top d-flex flex-row" style="
-          background-image: url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+          background-image: url('/storage/{{ $receta->imagen }}');
            height:340px; padding:2rem; 
            background-size: cover;
            background-position: center;
@@ -101,10 +101,12 @@
                 <p class="font-italic mb-1">Lives in New York</p>
                 <p class="font-italic mb-0">Photographer</p>-->
                 <div class="rounded-top d-flex flex-row" style="
-                  background-image: url('https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-                  height:340px; padding:2rem; 
-                  background-size: cover;
-                  background-position: center;
+                  background-image: url('/storage/{{ $receta->menu }}');
+                  width:100%;
+                  height:100vh;
+                  padding:1rem; 
+                  background-size: contain;
+                  background-position: center center;
                   background-repeat: no-repeat;
                   ">
                   </div>

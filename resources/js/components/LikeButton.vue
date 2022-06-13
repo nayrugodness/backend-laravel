@@ -2,7 +2,7 @@
     <div>
          <span class="like-btn" @click="likeReceta" :class="{ 'like-active' : isActive }"></span>
 
-         <p style="font-size:1.2rem;">{{ cantidadLikes }} Les gustó este restaurante</p>
+         <p style="font-size:1.5rem; color:#AC0202;">{{ cantidadLikes }} Les gustó este restaurante</p>
     </div>
 
 </template>

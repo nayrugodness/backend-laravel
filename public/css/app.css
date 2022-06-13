@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Stylish&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Stylish&display=swap);@charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -32,8 +32,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Fredoka One", cursive;
-  --font-family-monospace:"Fredoka One", cursive ;
+  --font-family-sans-serif: "Stylish", sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -43,7 +43,7 @@
 }
 
 html {
-  font-family: "Fredoka One", cursive;
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -55,7 +55,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Fredoka One", cursive;
+  font-family: "Stylish", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -176,7 +176,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Fredoka One", cursive;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -3980,6 +3980,7 @@ input[type=button].btn-block {
   padding-top: 0.275rem;
   padding-bottom: 0.275rem;
   margin-right: 1rem;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -9992,16 +9993,13 @@ trix-editor {
 }
 
 .titulo-categoria {
-  font-family: 'Fredoka One', cursive;
-  color: white;
+  font-family: "Cabin", sans-serif;
+  color: #333;
   font-size: 1.8rem;
   border-bottom: 3px solid #AC0202 !important;
   display: inline-block;
   padding-bottom: 0.5rem;
   padding-right: 2rem;
-}
-.titulo-categoria p{
-  color: #0000;
 }
 
 .btn-receta,
@@ -10062,7 +10060,7 @@ trix-editor {
 
 .hero-categorias {
   background-image: url("../images/bgimagen.jpg");
-  height: 70vh;
+  height: 30rem;
   background-size: cover;
   background-position: center center;
 }
@@ -10123,5 +10121,5 @@ trix-editor {
   }
 }
 * {
-  font-family:'Fredoka One', cursive;
+  font-family: "Stylish", sans-serif;
 }
