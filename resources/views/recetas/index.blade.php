@@ -12,7 +12,8 @@
             <thead class="bg-primary text-light">
                 <tr>
                     <th scole="col">Nombre</th>
-                    <!--<th scole="col">Ciudad</th>-->
+                    <th scole="col">Imagen principal</th>
+                    <th scole="col">Ciudad</th>
                     <th scole="col">Categoría</th>
                     <th scole="col">Acciones</th>
                 </tr>
@@ -23,16 +24,16 @@
                 @foreach ($recetas as $receta)
                     <tr>
                         <td> {{$receta->titulo}} </td>
-                        <!--<td>{{ $receta->ciudad->nombre}}</td>-->
+                        <td>  <img src="/storage/{{ $receta->imagen }}" style="width:10rem; height: 8rem;"></td>
+                        <td>{{ $receta->ciudad->nombre}}</td>
                         <td> {{$receta->categoria->nombre}} </td>
                         <td>
 
+                            <a href="{{ route('recetas.edit', ['receta' => $receta->id]) }} " class="btn btn-info d-block mb-2">Editar</a>
+                            <a href="{{ route('recetas.show', ['receta' => $receta->id]) }} " class="btn btn-success d-block" style="margin-bottom:0.5rem;">Ver</a>
                             <eliminar-receta
                                 receta-id={{$receta->id}}
                             ></eliminar-receta>
-
-                            <a href="{{ route('recetas.edit', ['receta' => $receta->id]) }} " class="btn btn-dark d-block mb-2">Editar</a>
-                            <a href="{{ route('recetas.show', ['receta' => $receta->id]) }} " class="btn btn-success d-block">Ver</a>
                         </td>
                     </tr>
                 @endforeach
