@@ -12,29 +12,54 @@
 @endsection
 
 @section('content')
-    <div style="background-color: white;">
-        <h2 class="text-center mb-1" style="color:#AC0202; font-size:1.8rem;">Registra tu restaurante</h2>
+    <div style="background-color: white;" class="pt-4">
+        <h2 class="text-center mb-5" style="color:#AC0202; font-size:1.8rem;">Registra tu restaurante</h2>
         <div class="row justify-content-center ">
             <div class="col-md-8">
                 <form method="POST" action="{{ route('recetas.store') }}" enctype="multipart/form-data" novalidate>
                     @csrf
-                    <div class="form-group">
-                        <label for="titulo" style="font-size:1.5rem;">Nombre restaurante</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                        
+                                <label for="titulo" style="font-size:1.5rem;">Nombre restaurante</label>
 
-                        <input style="font-size:1.5rem;" type="text"
-                            name="titulo"
-                            class="form-control @error('titulo') is-invalid @enderror "
-                            id="titulo"
-                            placeholder="Nombre restaurante"
-                            value={{ old('titulo') }}
-                        >
+                                <input style="font-size:1.5rem;" type="text"
+                                    name="titulo"
+                                    class="form-control @error('titulo') is-invalid @enderror "
+                                    id="titulo"
+                                    placeholder="Mi restaurante"
+                                    value={{ old('titulo') }}
+                                >
 
-                        @error('titulo')
-                            <span class="invalid-feedback d-block" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
+                                @error('titulo')
+                                    <span class="invalid-feedback d-block" role="alert">
+                                        <strong>{{$message}}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                            <label for="telefono" style="font-size:1.5rem;">Teléfono</label>
+
+                            <input style="font-size:1.5rem;" type="text"
+                                name="telefono"
+                                class="form-control @error('telefono') is-invalid @enderror "
+                                id="telefono"
+                                placeholder="ejemplo 31567.."
+                                value={{ old('telefono') }}
+                            >
+
+                            @error('telefono')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                            @enderror
+                            </div>
+                        </div>
                     </div>
+                
 
                     <div class="form-group">
                         <label for="direccion" style="font-size:1.5rem;">Dirección</label>
@@ -54,23 +79,6 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label for="telefono" style="font-size:1.5rem;">Teléfono</label>
-
-                        <input style="font-size:1.5rem;" type="text"
-                            name="telefono"
-                            class="form-control @error('telefono') is-invalid @enderror "
-                            id="telefono"
-                            placeholder=""
-                            value={{ old('telefono') }}
-                        >
-
-                        @error('telefono')
-                            <span class="invalid-feedback d-block" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
-                    </div>
 
                     <div class="form-group">
                         <label for="email" style="font-size:1.5rem;">Correo electrónico</label>
@@ -79,7 +87,7 @@
                             name="email"
                             class="form-control @error('email') is-invalid @enderror "
                             id="email"
-                            placeholder="email"
+                            placeholder="restauranteemail@gmail.com"
                             value={{ old('email') }}
                         >
 
@@ -90,62 +98,104 @@
                         @enderror
                     </div>
                     
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="from-group">
+                            <label for="categoria" style="font-size:1.5rem;">Categoria</label>
 
-                    <div class="from-group">
-                        <label for="categoria" style="font-size:1.5rem;">Categoria</label>
+                            <select style="font-size:1.5rem;"
+                                name="categoria"
+                                class="form-control @error('categoria') is-invalid @enderror "
+                                id="categoria"
+                            >
+                                <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
+                                @foreach ($categorias as $categoria)
+                                    <option 
+                                        value="{{ $categoria->id }}" 
+                                        {{ old('categoria') == $categoria->id ? 'selected' : '' }} 
+                                    >{{$categoria->nombre}}</option>
+                                @endforeach
+                            </select>
 
-                        <select style="font-size:1.5rem;"
-                            name="categoria"
-                            class="form-control @error('categoria') is-invalid @enderror "
-                            id="categoria"
-                        >
-                            <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
-                            @foreach ($categorias as $categoria)
-                                <option 
-                                    value="{{ $categoria->id }}" 
-                                    {{ old('categoria') == $categoria->id ? 'selected' : '' }} 
-                                >{{$categoria->nombre}}</option>
-                            @endforeach
-                        </select>
+                            @error('categoria')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                            @enderror
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="from-group">
+                            <label for="ciudad" style="font-size:1.5rem;">Ciudad</label>
 
-                        @error('categoria')
-                            <span class="invalid-feedback d-block" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
+                            <select style="font-size:1.5rem;"
+                                name="ciudad"
+                                class="form-control @error('ciudad') is-invalid @enderror "
+                                id="ciudad"
+                            >
+                                <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
+                                @foreach ($ciudades as $ciudad)
+                                    <option 
+                                        value="{{ $ciudad->id }}" 
+                                        {{ old('ciudad') == $ciudad->id ? 'selected' : '' }} 
+                                    >{{$ciudad->nombre}}</option>
+                                @endforeach
+                            </select>
+
+                            @error('ciudad')
+                                <span class="invalid-feedback d-block" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                            @enderror
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="from-group">
-                        <label for="ciudad" style="font-size:1.5rem;">Ciudad</label>
-
-                        <select style="font-size:1.5rem;"
-                            name="ciudad"
-                            class="form-control @error('ciudad') is-invalid @enderror "
-                            id="ciudad"
-                        >
-                            <option value="" style="font-size:1.5rem;">-- Seleccione -</option>
-                            @foreach ($ciudades as $ciudad)
-                                <option 
-                                    value="{{ $ciudad->id }}" 
-                                    {{ old('ciudad') == $ciudad->id ? 'selected' : '' }} 
-                                >{{$ciudad->nombre}}</option>
-                            @endforeach
-                        </select>
-
-                        @error('ciudad')
-                            <span class="invalid-feedback d-block" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
+                    
+                   
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group mt-3">
+                                <label for="nombre" style="font-size:1.5rem;">Hora Apertura:</label>
+                                <input
+                                    type="time"
+                                    class="form-control @error('apertura')  is-invalid  @enderror"
+                                    id="apertura"
+                                    name="apertura"
+                                    value="{{ old('apertura') }}"
+                                >
+                                @error('apertura')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mt-3">
+                                <label for="nombre" style="font-size:1.5rem;">Hora Cierre:</label>
+                                <input
+                                    type="time"
+                                    class="form-control @error('cierre')  is-invalid  @enderror"
+                                    id="cierre"
+                                    name="cierre"
+                                    value="{{ old('cierre') }}"
+                                >
+                                @error('cierre')
+                                    <div class="invalid-feedback">
+                                        {{$message}}
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group mt-3">
                         <label for="descripcion" style="font-size:1.5rem;">descripcion</label>
-                        <input id="descripcion" style="font-size:1.5rem;" type="hidden" name="descripcion" value="{{ old('descripcion') }}">
+                        <input id="descripcion" type="hidden" name="descripcion" value="{{ old('descripcion') }}">
                         <trix-editor 
                             class="form-control @error('descripcion') is-invalid @enderror "
                             input="descripcion"
-                        ></trix-editor>
+                        ></trix-editor >
 
                         @error('descripcion')
                             <span class="invalid-feedback d-block" role="alert">
@@ -153,38 +203,7 @@
                             </span>
                         @enderror
                     </div>
-
-                    <div class="form-group">
-                            <label for="nombre">Hora Apertura:</label>
-                            <input
-                                type="time"
-                                class="form-control @error('apertura')  is-invalid  @enderror"
-                                id="apertura"
-                                name="apertura"
-                                value="{{ old('apertura') }}"
-                            >
-                            @error('apertura')
-                                <div class="invalid-feedback">
-                                    {{$message}}
-                                </div>
-                            @enderror
-                    </div>
-
-                        <div class="form-group">
-                            <label for="nombre">Hora Cierre:</label>
-                            <input
-                                type="time"
-                                class="form-control @error('cierre')  is-invalid  @enderror"
-                                id="cierre"
-                                name="cierre"
-                                value="{{ old('cierre') }}"
-                            >
-                            @error('cierre')
-                                <div class="invalid-feedback">
-                                    {{$message}}
-                                </div>
-                            @enderror
-                        </div>
+                        
 
                     <!--<div class="form-group mt-3">
                         <label for="ingredientes">Ingredientes</label>
@@ -200,8 +219,8 @@
                         @enderror
                     </div>-->
 
-                    <div class="form-group mt-3">
-                        <label for="imagen" style="font-size:1.5rem;">Elige la imagen</label>
+                    <div class="form-group mt-4">
+                        <label for="imagen" style="font-size:1.5rem;">Elige la imagen principal de tu restaurante</label>
 
                         <input style="font-size:1.5rem;"
                             id="imagen" 
