@@ -203,12 +203,36 @@
                         
 
                         <div class="mt-2">
-                            <p style="font-size:1.5rem;">Imagen Actual:</p>
+                            <p style="font-size:1.5rem;">Imagen actual:</p>
 
                             <img src="/storage/{{$receta->imagen}}" style="width: 300px">
                         </div>
 
                         @error('imagen')
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label  style="font-size:1.5rem;" for="imagen">Añade el menú de tu restaurante</label>
+
+                        <input style="font-size:1.5rem;"
+                            id="menu"
+                            type="file"
+                            class="form-control @error('menu') is-invalid @enderror"
+                            name="menu"
+                        >
+                        
+
+                        <div class="mt-2">
+                            <p style="font-size:1.5rem;">Menú actual:</p>
+
+                            <img src="/storage/{{$receta->menu}}" style="width: 300px">
+                        </div>
+
+                        @error('menu')
                             <span class="invalid-feedback d-block" role="alert">
                                 <strong>{{$message}}</strong>
                             </span>
