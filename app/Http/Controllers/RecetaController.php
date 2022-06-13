@@ -262,6 +262,6 @@ class RecetaController extends Controller
         $reserva = Reserva::where('receta_id', $receta->id)->paginate(10);
         
 
-        return view('reservas.show', compact('receta', 'reserva'));
+        return view('reservas.reservations', compact('receta', 'reserva'));
     }
 }
