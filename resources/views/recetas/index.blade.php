@@ -45,8 +45,8 @@
         </div>-->
 
 
-        <!--<h2 class="text-center my-5">Restaurantes que te gustan</h2>-->
-        <!--<div class="col-md-10 mx-auto bg-white p-3">
+        <!--<h2 class="text-center my-5">Restaurantes que te gustan</h2>
+        <div class="col-md-10 col-lg-10 col-sm-10 mx-auto bg-white p-3">
 
             @if ( count( $usuario->meGusta ) > 0 )
                 <ul class="list-group">
