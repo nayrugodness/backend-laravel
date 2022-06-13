@@ -1,4 +1,4 @@
-<div class="btns-container mb-3"
+<div class="btns-container mt-5"
     style="
         display:flex; 
         flex-direction:row; 

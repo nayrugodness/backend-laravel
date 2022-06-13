@@ -30,6 +30,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nav.css' ) }}" rel="stylesheet">
 </head>
+<style>
+    .nav-link:hover{
+        color: white;
+    }
+</style>
 <body>
     <div id="app">
 
@@ -106,7 +111,7 @@
                 </a>
                 <label id="trigger2" for="x7"><img src="{{ asset('js/menu.png') }}" style="width:1.5rem; height:1.4rem;"></label>
             </ul>
-            <input type="checkbox" id="x7" style="display:none" />
+            <input type="checkbox" id="x7" style="display:none; color:white;" />
             <ul id="main">
                 @guest
                     <a href="{{ route('login') }}">
@@ -191,7 +196,7 @@
             @endforeach           
         </ul>
         @yield('hero')
-        <div class="" style="width:100vw; height:1rem; background:transparent; margin-top:4rem;"></div>
+        <div class="" style="width:100vw; height:1rem; background:transparent; margin-top:2rem;"></div>
         <div class="container">
             <div class="row">
                 <div class="py-6 mt-4 col-12">
