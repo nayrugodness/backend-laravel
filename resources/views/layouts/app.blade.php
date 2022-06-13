@@ -150,8 +150,6 @@
                                                      document.getElementById('logout-form').submit();">
                         <li>{{ __('Logout') }}</li>
                     </a>
-=======
->>>>>>> aaff34753ec636c46bd0d389e4b6abb14a7067c0
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
@@ -180,7 +178,18 @@
                 </div>
             </div>
         </nav>-->
-
+        <ul class="nav justify-content-center">
+            <!--<li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>-->
+            @foreach ($categorias as $categoria)
+                <li class="nav-item">
+                    <a class="nav-link"  href="{{ route('categorias.show', ['categoriaReceta' => $categoria->id ]) }}" style="">
+                        {{ $categoria->nombre }}
+                    </a>
+                </li>
+            @endforeach           
+        </ul>
         @yield('hero')
         <div class="" style="width:100vw; height:1rem; background:transparent; margin-top:4rem;"></div>
         <div class="container">
