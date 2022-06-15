@@ -22,7 +22,7 @@
 
                 @foreach ($reservas as $reserva)
                     <tr>
-                        <td> {{$reserva->user}} </td>
+                        <td> {{$reserva}} </td>
                         <td></td>
                         
                         <td>

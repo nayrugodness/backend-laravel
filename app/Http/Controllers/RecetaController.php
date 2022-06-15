@@ -260,14 +260,9 @@ class RecetaController extends Controller
     }
     public function reservations(Reserva $reserva, Receta $receta, User $usuario)
     {
-        //$usuario = auth()->user();
-        //$usuario = Reserva::where('user_id', $user->id)->paginate(10);
+        $data = Reserva::join('receta', 'receta.id', '=', 'receta.id')
+                            ->join('usuario', 'users.id', '=', 'users.id')->get(['users.name', 'users.email']);
 
-        // Reservas con paginación
-        $reservas = Reserva::where('receta_id', $receta->id)->paginate(10);
-        //$user = Reserva::where('user_id', $user->id)->paginate(10);
-
-        return view('recetas.reservations')->with('reservas', $reservas);//->with('restaurante', $restaurante);
-            //->with('ciudades', $ciudades);
+        return view('reservas.reservations')->with('reservas', $data);
     }
 }
