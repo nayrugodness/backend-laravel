@@ -5,7 +5,7 @@
 @endsection
 
 @section('hero')
-    <div class="hero-categorias" style="text-align:center;">
+    <div class="hero-categorias" style="text-align:center; height:100vh;">
         <form class="container h-100" action={{ route('buscar.show') }}>
             <div class="row h-100" style="display:flex; justify-content:center; align-items:center;">
                 <div class="col-md-6 texto-buscar" style="text-align:center;">

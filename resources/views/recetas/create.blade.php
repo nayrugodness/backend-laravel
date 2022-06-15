@@ -5,14 +5,14 @@
 @endsection
 
 @section('botones')
-    <a href="{{ route('recetas.index') }}" class="btn btn-outline-primary mr-2 text-uppercase font-weight-bold" style="width: 10rem;">
+    <a href="{{ route('recetas.index') }}" class="btn btn-outline-primary mr-2 mt-5 text-uppercase font-weight-bold" style="width: 10rem;">
         <svg class="icono" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg>
         Volver
     </a>
 @endsection
 
 @section('content')
-    <div style="background-color: white;" class="pt-4">
+    <div style="background-color: white;" class="pt-2">
         <h2 class="text-center mb-5" style="color:#AC0202; font-size:1.8rem;">Registra tu restaurante</h2>
         <div class="row justify-content-center ">
             <div class="col-md-8">

@@ -10059,14 +10059,13 @@ trix-editor {
 }
 
 .hero-categorias {
-  
-  background-image: linear-gradient(90deg, rgba(1,0,14,0.6619690112373074) 0%, rgba(0,0,6,0.6563667703409488) 35%),url('../images/image.jpg');
-  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(70, 70, 70, 0.4), rgba(53, 53, 53, 0.571)), url("../images/bgimagen.jpg");
+  height: 30rem;
   background-size: cover;
   background-position: center center;
 }
 .hero-categorias .texto-buscar p {
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: #FFF;
 }
 

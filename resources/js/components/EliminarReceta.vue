@@ -31,7 +31,7 @@
                             axios.post(`/recetas/${this.recetaId}`, {params, _method: 'delete'})
                                 .then(respuesta => {
                                     this.$swal({
-                                        title: 'Restaurante Eliminada',
+                                        title: 'Restaurante eliminado',
                                         text: 'Se eliminó el restaurante',
                                         icon: 'success'
                                     });
