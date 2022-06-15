@@ -15,7 +15,7 @@ class Reserva extends Model
     ];
     
     // Obtiene el usuario que reserva via FK
-    public function comensal()
+    public function usuario()
     {
        return $this->belongsTo(User::class, 'user_id');
     }

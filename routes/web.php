@@ -29,7 +29,7 @@ Route::get('/reserva', 'ReservaController@index')->name('reservas.index');
 Route::get('/reserva/{receta}/create', 'ReservaController@create')->name('reservas.create');
 Route::post('/reserva', 'ReservaController@store' )->name('reservas.store');
 Route::get('/reserva/{reserva}', 'ReservaController@show' )->name('reservas.show');
-Route::get('/receta/{receta}', 'RecetaController@reservations' )->name('recetas.reservations');
+Route::get('/receta/{receta}', 'ReservaController@reservations' )->name('reservas.reservations');
 Route::get('/reserva/{reserva}/edit', 'ReservaController@edit')->name('reservas.edit');
 Route::put('/reservas/{reserva}', 'ReservaController@update')->name('reservas.update');
 Route::delete('/reservas/{reserva}', 'ReservaController@destroy')->name('reservas.destroy');

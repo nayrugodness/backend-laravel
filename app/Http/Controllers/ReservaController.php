@@ -6,6 +6,7 @@ use App\CategoriaReceta;
 use App\CiudadReceta;
 use App\Receta;
 use App\Reserva;
+use App\User;
 use Illuminate\Http\Request;
 
 class ReservaController extends Controller
@@ -147,16 +148,16 @@ class ReservaController extends Controller
  
          return redirect()->action('ReservaController@index');
     }
-    public function reservations(Reserva $reserva, Receta $receta, User $usuario)
+    public function reservations(Reserva $reserva, Receta $receta, User $user)
     {
         //$usuario = auth()->user();
-        //$usuario = Reserva::where('user_id', $user->id)->paginate(10);
+        //$usuario = Reserva::where('user_id', $usuario->id)->paginate(10);
 
         // Reservas con paginación
         $reservas = Reserva::where('receta_id', $receta->id)->paginate(10);
-        //$user = Reserva::where('user_id', $user->id)->paginate(10);
+        $user = Reserva::where('user_id', $user->id)->paginate(10);
 
-        return view('reservas.reservations')->with('reservas', $reservas);//->with('restaurante', $restaurante);
+        return view('reservas.reservations')->with('reservas', $reservas)->with('user', $user);
             //->with('ciudades', $ciudades);
     }
 }
