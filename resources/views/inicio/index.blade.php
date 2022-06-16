@@ -5,7 +5,7 @@
 @endsection
 
 @section('hero')
-    <div class="hero-categorias" style="text-align:center; height:100vh;">
+    <div class="hero-categorias" style="text-align:center; height:100vh; background-image: linear-gradient(to bottom, rgba(12, 12, 12, 0.753), rgba(10, 10, 10, 0.685)),url('../images/image.jpg');">
         <form class="container h-100" action={{ route('buscar.show') }}>
             <div class="row h-100" style="display:flex; justify-content:center; align-items:center;">
                 <div class="col-md-6 texto-buscar" style="text-align:center;">

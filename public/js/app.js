@@ -1943,7 +1943,7 @@ __webpack_require__.r(__webpack_exports__);
             _method: 'delete'
           }).then(function (respuesta) {
             _this.$swal({
-              title: 'Restaurante Eliminada',
+              title: 'Restaurante eliminado',
               text: 'Se eliminó el restaurante',
               icon: 'success'
             }); // Eliminar receta del DOM
